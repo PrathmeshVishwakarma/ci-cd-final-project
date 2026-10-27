@@ -46,7 +46,11 @@ spec:
       script: |
         #!/bin/sh
         set -eu
-        python -m pip install --quiet --no-cache-dir -r "$(params.requirements-file)"
+        export HOME=/tmp
+        export PIP_CACHE_DIR=/tmp/pip-cache
+        export PYTHONPATH=/tmp/deps
+        python -m pip install --quiet --no-cache-dir \
+          --target=/tmp/deps -r "$(params.requirements-file)"
         python -m flake8 app.py tests --count --statistics
 ---
 apiVersion: tekton.dev/v1beta1
@@ -74,7 +78,12 @@ spec:
       script: |
         #!/bin/sh
         set -eu
-        python -m pip install --quiet --no-cache-dir -r "$(params.requirements-file)"
+        export HOME=/tmp
+        export PIP_CACHE_DIR=/tmp/pip-cache
+        export PYTHONPATH=/tmp/deps
+        export PATH="/tmp/deps/bin:${PATH}"
+        python -m pip install --quiet --no-cache-dir \
+          --target=/tmp/deps -r "$(params.requirements-file)"
         nosetests -v tests
 ---
 apiVersion: tekton.dev/v1beta1
