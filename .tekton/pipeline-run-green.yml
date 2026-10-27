@@ -1,0 +1,28 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: oc-pipelines-oc-green
+  labels:
+    app.kubernetes.io/part-of: oc-pipelines
+spec:
+  pipelineRef:
+    name: oc-pipelines
+  serviceAccountName: pipeline
+  timeouts:
+    pipeline: 1h0m0s
+  workspaces:
+    - name: pipeline-workspace
+      persistentVolumeClaim:
+        claimName: oc-pipelines-pvc
+  params:
+    # Replace this URL with your public GitHub repository.
+    - name: repo-url
+      value: https://github.com/PrathmeshVishwakarma/ci-cd-final-project.git
+    - name: revision
+      value: main
+    - name: image
+      value: image-registry.openshift-image-registry.svc:5000/ci-cd-final/counter-service:green
+    - name: namespace
+      value: ci-cd-final
+    - name: deployment-name
+      value: counter-service-green

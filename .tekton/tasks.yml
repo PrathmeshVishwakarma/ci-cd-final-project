@@ -1,0 +1,184 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: cleanup
+  labels:
+    app.kubernetes.io/part-of: oc-pipelines
+spec:
+  description: Remove stale files from the shared workspace before cloning.
+  workspaces:
+    - name: source
+      description: Workspace shared by all pipeline tasks.
+  steps:
+    - name: cleanup
+      image: alpine:3.19
+      script: |
+        #!/bin/sh
+        set -eu
+        workspace="$(workspaces.source.path)"
+        echo "Cleaning workspace: ${workspace}"
+        find "${workspace}" -mindepth 1 -maxdepth 1 \
+          ! -name lost+found -exec rm -rf {} +
+        echo "Workspace cleaned."
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: flake8
+  labels:
+    app.kubernetes.io/part-of: oc-pipelines
+spec:
+  description: Lint the Python application with flake8.
+  workspaces:
+    - name: source
+      description: Workspace containing the cloned repository.
+  params:
+    - name: image
+      type: string
+      default: python:3.9-slim
+    - name: requirements-file
+      type: string
+      default: requirements.txt
+  steps:
+    - name: flake8
+      image: $(params.image)
+      workingDir: $(workspaces.source.path)
+      script: |
+        #!/bin/sh
+        set -eu
+        python -m pip install --quiet --no-cache-dir -r "$(params.requirements-file)"
+        python -m flake8 app.py tests --count --statistics
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: nose
+  labels:
+    app.kubernetes.io/part-of: oc-pipelines
+spec:
+  description: Run the Python unit tests with nose.
+  workspaces:
+    - name: source
+      description: Workspace containing the cloned repository.
+  params:
+    - name: image
+      type: string
+      default: python:3.9-slim
+    - name: requirements-file
+      type: string
+      default: requirements.txt
+  steps:
+    - name: nose
+      image: $(params.image)
+      workingDir: $(workspaces.source.path)
+      script: |
+        #!/bin/sh
+        set -eu
+        python -m pip install --quiet --no-cache-dir -r "$(params.requirements-file)"
+        nosetests -v tests
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: buildah
+  labels:
+    app.kubernetes.io/part-of: oc-pipelines
+spec:
+  description: Build the container image with buildah and push it to the registry.
+  workspaces:
+    - name: source
+      description: Workspace containing the cloned repository.
+  params:
+    - name: image
+      description: Fully qualified image tag to build and push.
+      type: string
+    - name: context
+      description: Build context directory.
+      type: string
+      default: .
+    - name: dockerfile
+      description: Dockerfile name inside the build context.
+      type: string
+      default: Dockerfile
+  steps:
+    - name: build-and-push
+      image: quay.io/buildah/stable:v1.43.5
+      workingDir: $(workspaces.source.path)
+      securityContext:
+        privileged: true
+      script: |
+        #!/usr/bin/env bash
+        set -euo pipefail
+
+        export STORAGE_DRIVER=vfs
+
+        IMAGE="$(params.image)"
+        CONTEXT="$(params.context)"
+        DOCKERFILE="$(params.dockerfile)"
+        AUTHFILE="/tmp/registry-auth.json"
+        REGISTRY="${IMAGE%%/*}"
+
+        TOKEN="$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)"
+        AUTH="$(printf 'serviceaccount:%s' "${TOKEN}" | base64 | tr -d '\n')"
+        printf '{"auths":{"%s":{"auth":"%s"}}}\n' "${REGISTRY}" "${AUTH}" > "${AUTHFILE}"
+        export REGISTRY_AUTH_FILE="${AUTHFILE}"
+
+        echo "Building ${IMAGE} from ${CONTEXT}/${DOCKERFILE}"
+        buildah bud --format docker --tls-verify=false \
+          -f "${CONTEXT}/${DOCKERFILE}" -t "${IMAGE}" "${CONTEXT}"
+
+        echo "Pushing ${IMAGE}"
+        buildah push --tls-verify=false "${IMAGE}"
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: deploy
+  labels:
+    app.kubernetes.io/part-of: oc-pipelines
+spec:
+  description: Apply the OpenShift manifests and roll out the new image.
+  workspaces:
+    - name: source
+      description: Workspace containing the cloned repository.
+  params:
+    - name: image
+      description: Image to deploy.
+      type: string
+    - name: namespace
+      description: OpenShift project where the application is deployed.
+      type: string
+      default: ci-cd-final
+    - name: deployment-name
+      description: Deployment to update.
+      type: string
+      default: counter-service-green
+    - name: container-name
+      description: Container name inside the deployment.
+      type: string
+      default: counter-service
+    - name: manifests-dir
+      description: Directory that contains the OpenShift manifests.
+      type: string
+      default: manifests
+  steps:
+    - name: deploy
+      image: quay.io/openshift/origin-cli:latest
+      workingDir: $(workspaces.source.path)
+      script: |
+        #!/usr/bin/env bash
+        set -euo pipefail
+
+        NAMESPACE="$(params.namespace)"
+        IMAGE="$(params.image)"
+        DEPLOYMENT="$(params.deployment-name)"
+        CONTAINER="$(params.container-name)"
+        MANIFESTS="$(params.manifests-dir)"
+
+        oc apply -n "${NAMESPACE}" -f "${MANIFESTS}/deployment.yaml"
+        oc set image "deployment/${DEPLOYMENT}" \
+          "${CONTAINER}=${IMAGE}" -n "${NAMESPACE}"
+        oc apply -n "${NAMESPACE}" -f "${MANIFESTS}/service.yaml"
+        oc apply -n "${NAMESPACE}" -f "${MANIFESTS}/route.yaml"
+        oc rollout status "deployment/${DEPLOYMENT}" \
+          -n "${NAMESPACE}" --timeout=180s

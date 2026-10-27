@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: counter-service-green
+  labels:
+    app: counter-service
+    version: green
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: counter-service
+      version: green
+  template:
+    metadata:
+      labels:
+        app: counter-service
+        version: green
+    spec:
+      containers:
+        - name: counter-service
+          image: image-registry.openshift-image-registry.svc:5000/ci-cd-final/counter-service:latest
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 8000
+          env:
+            - name: PORT
+              value: "8000"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
