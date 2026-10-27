@@ -1,411 +1,729 @@
-# GitHub Actions run 40571163459 for PrathmeshVishwakarma/ci-cd-final-project
+# GitHub Actions run 40574783389 for PrathmeshVishwakarma/ci-cd-final-project
 
 
-✓ main CI · 40571163459
-Triggered via push about 20 minutes ago
+✓ main CI · 40574783389
+Triggered via push less than a minute ago
 
 JOBS
-✓ Lint and test in 29s (ID 122425421755)
+✓ Container build in 40s (ID 122438170416)
+✓ Lint and test in 33s (ID 122438170865)
 
 ANNOTATIONS
+! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Container build: .github#2
+
 ! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
 Lint and test: .github#2
 
 
-For more information about the job, try: gh run view --job=122425421755
-View this run on GitHub: https://github.com/PrathmeshVishwakarma/ci-cd-final-project/actions/runs/40571163459
+For more information about a job, try: gh run view --job=<job-id>
+View this run on GitHub: https://github.com/PrathmeshVishwakarma/ci-cd-final-project/actions/runs/40574783389
 
 # Step logs
 
-Lint and test	Set up job	﻿2026-10-27T19:40:06.9163016Z Current runner version: '2.338.0'
-Lint and test	Set up job	2026-10-27T19:40:06.9187587Z ##[group]Runner Image Provisioner
-Lint and test	Set up job	2026-10-27T19:40:06.9188465Z Hosted Compute Agent
-Lint and test	Set up job	2026-10-27T19:40:06.9189192Z Version: 20261021.618
-Lint and test	Set up job	2026-10-27T19:40:06.9189865Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
-Lint and test	Set up job	2026-10-27T19:40:06.9190728Z Build Date: 2026-10-21T00:45:21Z
-Lint and test	Set up job	2026-10-27T19:40:06.9191469Z Worker ID: {1da4f450-befc-4b46-b26c-be83ab463c2d}
-Lint and test	Set up job	2026-10-27T19:40:06.9192182Z Region: westus
-Lint and test	Set up job	2026-10-27T19:40:06.9192837Z Cloud: Azure
-Lint and test	Set up job	2026-10-27T19:40:06.9193742Z ##[endgroup]
-Lint and test	Set up job	2026-10-27T19:40:06.9195650Z ##[group]Operating System
-Lint and test	Set up job	2026-10-27T19:40:06.9196355Z Ubuntu
-Lint and test	Set up job	2026-10-27T19:40:06.9196924Z 22.04.5
-Lint and test	Set up job	2026-10-27T19:40:06.9197527Z LTS
-Lint and test	Set up job	2026-10-27T19:40:06.9198059Z ##[endgroup]
-Lint and test	Set up job	2026-10-27T19:40:06.9198731Z ##[group]Runner Image
-Lint and test	Set up job	2026-10-27T19:40:06.9199381Z Image: ubuntu-22.04
-Lint and test	Set up job	2026-10-27T19:40:06.9199992Z Version: 20261012.322.1
-Lint and test	Set up job	2026-10-27T19:40:06.9201158Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20261012.322/images/ubuntu/Ubuntu2204-Readme.md
-Lint and test	Set up job	2026-10-27T19:40:06.9203021Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20261012.322
-Lint and test	Set up job	2026-10-27T19:40:06.9204263Z ##[endgroup]
-Lint and test	Set up job	2026-10-27T19:40:06.9205689Z ##[group]GITHUB_TOKEN Permissions
-Lint and test	Set up job	2026-10-27T19:40:06.9207928Z Contents: read
-Lint and test	Set up job	2026-10-27T19:40:06.9208578Z Metadata: read
-Lint and test	Set up job	2026-10-27T19:40:06.9209272Z ##[endgroup]
-Lint and test	Set up job	2026-10-27T19:40:06.9211256Z Secret source: Actions
-Lint and test	Set up job	2026-10-27T19:40:06.9212368Z Cache mode: write
-Lint and test	Set up job	2026-10-27T19:40:06.9213071Z Prepare workflow directory
-Lint and test	Set up job	2026-10-27T19:40:06.9565262Z Prepare all required actions
-Lint and test	Set up job	2026-10-27T19:40:06.9637985Z Getting action download info
-Lint and test	Set up job	2026-10-27T19:40:07.3200338Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
-Lint and test	Set up job	2026-10-27T19:40:07.4372698Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
-Lint and test	Set up job	2026-10-27T19:40:07.6219744Z Complete job name: Lint and test
-Lint and test	Checkout repository	﻿2026-10-27T19:40:07.7083898Z ##[group]Run actions/checkout@v4
-Lint and test	Checkout repository	2026-10-27T19:40:07.7084880Z with:
-Lint and test	Checkout repository	2026-10-27T19:40:07.7085420Z   repository: PrathmeshVishwakarma/ci-cd-final-project
-Lint and test	Checkout repository	2026-10-27T19:40:07.7089265Z   token: ***
-Lint and test	Checkout repository	2026-10-27T19:40:07.7089710Z   ssh-strict: true
-Lint and test	Checkout repository	2026-10-27T19:40:07.7090140Z   ssh-user: git
-Lint and test	Checkout repository	2026-10-27T19:40:07.7090579Z   persist-credentials: true
-Lint and test	Checkout repository	2026-10-27T19:40:07.7091064Z   clean: true
-Lint and test	Checkout repository	2026-10-27T19:40:07.7091511Z   sparse-checkout-cone-mode: true
-Lint and test	Checkout repository	2026-10-27T19:40:07.7092025Z   fetch-depth: 1
-Lint and test	Checkout repository	2026-10-27T19:40:07.7092455Z   fetch-tags: false
-Lint and test	Checkout repository	2026-10-27T19:40:07.7092891Z   show-progress: true
-Lint and test	Checkout repository	2026-10-27T19:40:07.7093534Z   lfs: false
-Lint and test	Checkout repository	2026-10-27T19:40:07.7093953Z   submodules: false
-Lint and test	Checkout repository	2026-10-27T19:40:07.7094399Z   set-safe-directory: true
-Lint and test	Checkout repository	2026-10-27T19:40:07.7094903Z   allow-unsafe-pr-checkout: false
-Lint and test	Checkout repository	2026-10-27T19:40:07.7095671Z ##[endgroup]
-Lint and test	Checkout repository	2026-10-27T19:40:07.9889329Z Syncing repository: PrathmeshVishwakarma/ci-cd-final-project
-Lint and test	Checkout repository	2026-10-27T19:40:07.9891228Z ##[group]Getting Git version info
-Lint and test	Checkout repository	2026-10-27T19:40:07.9892161Z Working directory is '/home/runner/work/ci-cd-final-project/ci-cd-final-project'
-Lint and test	Checkout repository	2026-10-27T19:40:07.9894191Z [command]/usr/bin/git version
-Lint and test	Checkout repository	2026-10-27T19:40:07.9942055Z git version 2.55.0
-Lint and test	Checkout repository	2026-10-27T19:40:07.9979898Z ##[endgroup]
-Lint and test	Checkout repository	2026-10-27T19:40:07.9998662Z Temporarily overriding HOME='/home/runner/work/_temp/bb7a0f62-0d2a-4033-b74a-300b673aa259' before making global git config changes
-Lint and test	Checkout repository	2026-10-27T19:40:08.0014220Z Adding repository directory to the temporary git global config as a safe directory
-Lint and test	Checkout repository	2026-10-27T19:40:08.0016691Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ci-cd-final-project/ci-cd-final-project
-Lint and test	Checkout repository	2026-10-27T19:40:08.0052661Z Deleting the contents of '/home/runner/work/ci-cd-final-project/ci-cd-final-project'
-Lint and test	Checkout repository	2026-10-27T19:40:08.0075083Z ##[group]Initializing the repository
-Lint and test	Checkout repository	2026-10-27T19:40:08.0076760Z [command]/usr/bin/git init /home/runner/work/ci-cd-final-project/ci-cd-final-project
-Lint and test	Checkout repository	2026-10-27T19:40:08.0206178Z hint: Using 'master' as the name for the initial branch. This default branch name
-Lint and test	Checkout repository	2026-10-27T19:40:08.0230864Z hint: will change to "main" in Git 3.0. To configure the initial branch name
-Lint and test	Checkout repository	2026-10-27T19:40:08.0243921Z hint: to use in all of your new repositories, which will suppress this warning,
-Lint and test	Checkout repository	2026-10-27T19:40:08.0245455Z hint: call:
-Lint and test	Checkout repository	2026-10-27T19:40:08.0246236Z hint:
-Lint and test	Checkout repository	2026-10-27T19:40:08.0247157Z hint: 	git config --global init.defaultBranch <name>
-Lint and test	Checkout repository	2026-10-27T19:40:08.0248340Z hint:
-Lint and test	Checkout repository	2026-10-27T19:40:08.0249461Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-Lint and test	Checkout repository	2026-10-27T19:40:08.0251245Z hint: 'development'. The just-created branch can be renamed via this command:
-Lint and test	Checkout repository	2026-10-27T19:40:08.0256131Z hint:
-Lint and test	Checkout repository	2026-10-27T19:40:08.0257094Z hint: 	git branch -m <name>
-Lint and test	Checkout repository	2026-10-27T19:40:08.0257990Z hint:
-Lint and test	Checkout repository	2026-10-27T19:40:08.0259193Z hint: Disable this message with "git config set advice.defaultBranchName false"
-Lint and test	Checkout repository	2026-10-27T19:40:08.0261291Z Initialized empty Git repository in /home/runner/work/ci-cd-final-project/ci-cd-final-project/.git/
-Lint and test	Checkout repository	2026-10-27T19:40:08.0265222Z [command]/usr/bin/git remote add origin https://github.com/PrathmeshVishwakarma/ci-cd-final-project
-Lint and test	Checkout repository	2026-10-27T19:40:08.0307540Z ##[endgroup]
-Lint and test	Checkout repository	2026-10-27T19:40:08.0308464Z ##[group]Disabling automatic garbage collection
-Lint and test	Checkout repository	2026-10-27T19:40:08.0314672Z [command]/usr/bin/git config --local gc.auto 0
-Lint and test	Checkout repository	2026-10-27T19:40:08.0388353Z ##[endgroup]
-Lint and test	Checkout repository	2026-10-27T19:40:08.0389861Z ##[group]Setting up auth
-Lint and test	Checkout repository	2026-10-27T19:40:08.0391243Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-Lint and test	Checkout repository	2026-10-27T19:40:08.0442042Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-Lint and test	Checkout repository	2026-10-27T19:40:08.0899041Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-Lint and test	Checkout repository	2026-10-27T19:40:08.0939979Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-Lint and test	Checkout repository	2026-10-27T19:40:08.1202977Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-Lint and test	Checkout repository	2026-10-27T19:40:08.1243724Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-Lint and test	Checkout repository	2026-10-27T19:40:08.1506344Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
-Lint and test	Checkout repository	2026-10-27T19:40:08.1550490Z ##[endgroup]
-Lint and test	Checkout repository	2026-10-27T19:40:08.1551425Z ##[group]Fetching the repository
-Lint and test	Checkout repository	2026-10-27T19:40:08.1562076Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ee933a23c3c493420bcbaec0dc5ffbb74a99f6b6:refs/remotes/origin/main
-Lint and test	Checkout repository	2026-10-27T19:40:08.5738490Z From https://github.com/PrathmeshVishwakarma/ci-cd-final-project
-Lint and test	Checkout repository	2026-10-27T19:40:08.5740026Z  * [new ref]         ee933a23c3c493420bcbaec0dc5ffbb74a99f6b6 -> origin/main
-Lint and test	Checkout repository	2026-10-27T19:40:08.5744465Z ##[endgroup]
-Lint and test	Checkout repository	2026-10-27T19:40:08.5745413Z ##[group]Determining the checkout info
-Lint and test	Checkout repository	2026-10-27T19:40:08.5747237Z ##[endgroup]
-Lint and test	Checkout repository	2026-10-27T19:40:08.5752211Z [command]/usr/bin/git sparse-checkout disable
-Lint and test	Checkout repository	2026-10-27T19:40:08.5803885Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
-Lint and test	Checkout repository	2026-10-27T19:40:08.5839990Z ##[group]Checking out the ref
-Lint and test	Checkout repository	2026-10-27T19:40:08.5844469Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
-Lint and test	Checkout repository	2026-10-27T19:40:08.5925350Z Switched to a new branch 'main'
-Lint and test	Checkout repository	2026-10-27T19:40:08.5928950Z branch 'main' set up to track 'origin/main'.
-Lint and test	Checkout repository	2026-10-27T19:40:08.5974587Z ##[endgroup]
-Lint and test	Checkout repository	2026-10-27T19:40:08.5977971Z [command]/usr/bin/git log -1 --format=%H
-Lint and test	Checkout repository	2026-10-27T19:40:08.6008507Z ee933a23c3c493420bcbaec0dc5ffbb74a99f6b6
-Lint and test	Set up Python 3.9	﻿2026-10-27T19:40:08.6316975Z ##[group]Run actions/setup-python@v5
-Lint and test	Set up Python 3.9	2026-10-27T19:40:08.6317646Z with:
-Lint and test	Set up Python 3.9	2026-10-27T19:40:08.6318071Z   python-version: 3.9
-Lint and test	Set up Python 3.9	2026-10-27T19:40:08.6318527Z   cache: pip
-Lint and test	Set up Python 3.9	2026-10-27T19:40:08.6318955Z   check-latest: false
-Lint and test	Set up Python 3.9	2026-10-27T19:40:08.6322989Z   token: ***
-Lint and test	Set up Python 3.9	2026-10-27T19:40:08.6323782Z   update-environment: true
-Lint and test	Set up Python 3.9	2026-10-27T19:40:08.6324307Z   allow-prereleases: false
-Lint and test	Set up Python 3.9	2026-10-27T19:40:08.6324804Z   freethreaded: false
-Lint and test	Set up Python 3.9	2026-10-27T19:40:08.6325264Z ##[endgroup]
-Lint and test	Set up Python 3.9	2026-10-27T19:40:08.7740435Z ##[group]Installed versions
-Lint and test	Set up Python 3.9	2026-10-27T19:40:08.7830522Z Version 3.9 was not found in the local cache
-Lint and test	Set up Python 3.9	2026-10-27T19:40:08.7990622Z (node:2213) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-Lint and test	Set up Python 3.9	2026-10-27T19:40:08.7991992Z (Use `node --trace-deprecation ...` to show where the warning was created)
-Lint and test	Set up Python 3.9	2026-10-27T19:40:09.6811968Z Version 3.9 is available for downloading
-Lint and test	Set up Python 3.9	2026-10-27T19:40:09.6812917Z Download from "https://github.com/actions/python-versions/releases/download/3.9.25-19039189640/python-3.9.25-linux-22.04-x64.tar.gz"
-Lint and test	Set up Python 3.9	2026-10-27T19:40:10.7181467Z Extract downloaded archive
-Lint and test	Set up Python 3.9	2026-10-27T19:40:10.7316120Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/85446327-4535-45fd-8dc7-7761d63b7f94 -f /home/runner/work/_temp/05fae178-5929-46e0-9561-5993807b4026
-Lint and test	Set up Python 3.9	2026-10-27T19:40:12.1000071Z Execute installation script
-Lint and test	Set up Python 3.9	2026-10-27T19:40:12.1110658Z Check if Python hostedtoolcache folder exist...
-Lint and test	Set up Python 3.9	2026-10-27T19:40:12.1111467Z Create Python 3.9.25 folder
-Lint and test	Set up Python 3.9	2026-10-27T19:40:12.1129106Z Copy Python binaries to hostedtoolcache folder
-Lint and test	Set up Python 3.9	2026-10-27T19:40:12.6720488Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
-Lint and test	Set up Python 3.9	2026-10-27T19:40:12.6771367Z Upgrading pip...
-Lint and test	Set up Python 3.9	2026-10-27T19:40:14.9783849Z Looking in links: /tmp/tmp69ljgfku
-Lint and test	Set up Python 3.9	2026-10-27T19:40:14.9789415Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (79.0.1)
-Lint and test	Set up Python 3.9	2026-10-27T19:40:14.9794634Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (23.0.1)
-Lint and test	Set up Python 3.9	2026-10-27T19:40:16.2279697Z Collecting pip
-Lint and test	Set up Python 3.9	2026-10-27T19:40:16.2860903Z Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
-Lint and test	Set up Python 3.9	2026-10-27T19:40:16.4371101Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 12.0 MB/s eta 0:00:00
-Lint and test	Set up Python 3.9	2026-10-27T19:40:16.4371673Z 
-Lint and test	Set up Python 3.9	2026-10-27T19:40:16.4978800Z Installing collected packages: pip
-Lint and test	Set up Python 3.9	2026-10-27T19:40:16.4980512Z Attempting uninstall: pip
-Lint and test	Set up Python 3.9	2026-10-27T19:40:16.4987149Z Found existing installation: pip 23.0.1
-Lint and test	Set up Python 3.9	2026-10-27T19:40:16.6914741Z Uninstalling pip-23.0.1:
-Lint and test	Set up Python 3.9	2026-10-27T19:40:16.6989164Z Successfully uninstalled pip-23.0.1
-Lint and test	Set up Python 3.9	2026-10-27T19:40:17.5693636Z Successfully installed pip-26.0.1
-Lint and test	Set up Python 3.9	2026-10-27T19:40:17.6181010Z Create complete file
-Lint and test	Set up Python 3.9	2026-10-27T19:40:17.6229289Z Successfully set up CPython (3.9.25)
-Lint and test	Set up Python 3.9	2026-10-27T19:40:17.6231166Z ##[endgroup]
-Lint and test	Set up Python 3.9	2026-10-27T19:40:17.6849914Z [command]/opt/hostedtoolcache/Python/3.9.25/x64/bin/pip cache dir
-Lint and test	Set up Python 3.9	2026-10-27T19:40:17.8533339Z /home/runner/.cache/pip
-Lint and test	Set up Python 3.9	2026-10-27T19:40:18.1459192Z Cache hit for: setup-python-Linux-x64-22.04-Ubuntu-python-3.9.25-pip-dd868feff71aefd518771d7701f6866b300523c93606792d3ac48991462021a4
-Lint and test	Set up Python 3.9	2026-10-27T19:40:18.1585082Z (node:2213) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
-Lint and test	Set up Python 3.9	2026-10-27T19:40:19.0698941Z Received 3179307 of 3179307 (100.0%), 4.6 MBs/sec
-Lint and test	Set up Python 3.9	2026-10-27T19:40:19.0704928Z Cache Size: ~3 MB (3179307 B)
-Lint and test	Set up Python 3.9	2026-10-27T19:40:19.0728272Z [command]/usr/bin/tar -xf /home/runner/work/_temp/1b24feec-3677-4079-be8f-7481b86e7f19/cache.tzst -P -C /home/runner/work/ci-cd-final-project/ci-cd-final-project --use-compress-program unzstd
-Lint and test	Set up Python 3.9	2026-10-27T19:40:19.0984598Z Cache restored successfully
-Lint and test	Set up Python 3.9	2026-10-27T19:40:19.0998200Z Cache restored from key: setup-python-Linux-x64-22.04-Ubuntu-python-3.9.25-pip-dd868feff71aefd518771d7701f6866b300523c93606792d3ac48991462021a4
-Lint and test	Install dependencies	﻿2026-10-27T19:40:19.1196217Z ##[group]Run python -m pip install --upgrade pip
-Lint and test	Install dependencies	2026-10-27T19:40:19.1196669Z ^[[36;1mpython -m pip install --upgrade pip^[[0m
-Lint and test	Install dependencies	2026-10-27T19:40:19.1197007Z ^[[36;1mpip install -r requirements.txt^[[0m
-Lint and test	Install dependencies	2026-10-27T19:40:19.1594202Z shell: /usr/bin/bash -e {0}
-Lint and test	Install dependencies	2026-10-27T19:40:19.1594487Z env:
-Lint and test	Install dependencies	2026-10-27T19:40:19.1594771Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
-Lint and test	Install dependencies	2026-10-27T19:40:19.1595242Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
-Lint and test	Install dependencies	2026-10-27T19:40:19.1595712Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-Lint and test	Install dependencies	2026-10-27T19:40:19.1596116Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-Lint and test	Install dependencies	2026-10-27T19:40:19.1596526Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-Lint and test	Install dependencies	2026-10-27T19:40:19.1596932Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
-Lint and test	Install dependencies	2026-10-27T19:40:19.1597286Z ##[endgroup]
-Lint and test	Install dependencies	2026-10-27T19:40:19.5027845Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (26.0.1)
-Lint and test	Install dependencies	2026-10-27T19:40:20.0457849Z Collecting Flask==2.2.5 (from -r requirements.txt (line 1))
-Lint and test	Install dependencies	2026-10-27T19:40:20.0478614Z   Using cached Flask-2.2.5-py3-none-any.whl.metadata (3.9 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.0672647Z Collecting Werkzeug==2.2.3 (from -r requirements.txt (line 2))
-Lint and test	Install dependencies	2026-10-27T19:40:20.0691400Z   Using cached Werkzeug-2.2.3-py3-none-any.whl.metadata (4.4 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.0833595Z Collecting Flask-Cors==3.0.10 (from -r requirements.txt (line 3))
-Lint and test	Install dependencies	2026-10-27T19:40:20.0853001Z   Using cached Flask_Cors-3.0.10-py2.py3-none-any.whl.metadata (5.4 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.1020891Z Collecting gunicorn==20.1.0 (from -r requirements.txt (line 4))
-Lint and test	Install dependencies	2026-10-27T19:40:20.1039563Z   Using cached gunicorn-20.1.0-py3-none-any.whl.metadata (3.8 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.1115752Z Collecting nose==1.3.7 (from -r requirements.txt (line 5))
-Lint and test	Install dependencies	2026-10-27T19:40:20.1134679Z   Using cached nose-1.3.7-py3-none-any.whl.metadata (1.7 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.1392468Z Collecting flake8==6.0.0 (from -r requirements.txt (line 6))
-Lint and test	Install dependencies	2026-10-27T19:40:20.1411406Z   Using cached flake8-6.0.0-py2.py3-none-any.whl.metadata (3.8 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.1570055Z Collecting Jinja2>=3.0 (from Flask==2.2.5->-r requirements.txt (line 1))
-Lint and test	Install dependencies	2026-10-27T19:40:20.1588812Z   Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.1676150Z Collecting itsdangerous>=2.0 (from Flask==2.2.5->-r requirements.txt (line 1))
-Lint and test	Install dependencies	2026-10-27T19:40:20.1695207Z   Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.1850335Z Collecting click>=8.0 (from Flask==2.2.5->-r requirements.txt (line 1))
-Lint and test	Install dependencies	2026-10-27T19:40:20.1868920Z   Using cached click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.2165541Z Collecting importlib-metadata>=3.6.0 (from Flask==2.2.5->-r requirements.txt (line 1))
-Lint and test	Install dependencies	2026-10-27T19:40:20.2185006Z   Using cached importlib_metadata-8.7.1-py3-none-any.whl.metadata (4.7 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.2900385Z Collecting MarkupSafe>=2.1.1 (from Werkzeug==2.2.3->-r requirements.txt (line 2))
-Lint and test	Install dependencies	2026-10-27T19:40:20.2920475Z   Using cached markupsafe-3.0.4-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.3038834Z Collecting Six (from Flask-Cors==3.0.10->-r requirements.txt (line 3))
-Lint and test	Install dependencies	2026-10-27T19:40:20.3058207Z   Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.3072494Z Requirement already satisfied: setuptools>=3.0 in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (from gunicorn==20.1.0->-r requirements.txt (line 4)) (79.0.1)
-Lint and test	Install dependencies	2026-10-27T19:40:20.3142985Z Collecting mccabe<0.8.0,>=0.7.0 (from flake8==6.0.0->-r requirements.txt (line 6))
-Lint and test	Install dependencies	2026-10-27T19:40:20.3161161Z   Using cached mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.3251939Z Collecting pycodestyle<2.11.0,>=2.10.0 (from flake8==6.0.0->-r requirements.txt (line 6))
-Lint and test	Install dependencies	2026-10-27T19:40:20.3270282Z   Using cached pycodestyle-2.10.0-py2.py3-none-any.whl.metadata (31 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.3396663Z Collecting pyflakes<3.1.0,>=3.0.0 (from flake8==6.0.0->-r requirements.txt (line 6))
-Lint and test	Install dependencies	2026-10-27T19:40:20.3414880Z   Using cached pyflakes-3.0.1-py2.py3-none-any.whl.metadata (3.8 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.3576780Z Collecting zipp>=3.20 (from importlib-metadata>=3.6.0->Flask==2.2.5->-r requirements.txt (line 1))
-Lint and test	Install dependencies	2026-10-27T19:40:20.3595137Z   Using cached zipp-3.23.1-py3-none-any.whl.metadata (3.6 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.3786510Z Using cached Flask-2.2.5-py3-none-any.whl (101 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.3805858Z Using cached Werkzeug-2.2.3-py3-none-any.whl (233 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.3825920Z Using cached Flask_Cors-3.0.10-py2.py3-none-any.whl (14 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.3844515Z Using cached gunicorn-20.1.0-py3-none-any.whl (79 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.3863016Z Using cached nose-1.3.7-py3-none-any.whl (154 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.3882947Z Using cached flake8-6.0.0-py2.py3-none-any.whl (57 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.3902723Z Using cached mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.3921020Z Using cached pycodestyle-2.10.0-py2.py3-none-any.whl (41 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.3940010Z Using cached pyflakes-3.0.1-py2.py3-none-any.whl (62 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.3958868Z Using cached click-8.1.8-py3-none-any.whl (98 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.3978061Z Using cached importlib_metadata-8.7.1-py3-none-any.whl (27 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.3996971Z Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.4015516Z Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.4035524Z Using cached markupsafe-3.0.4-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.4053525Z Using cached zipp-3.23.1-py3-none-any.whl (10 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.4071714Z Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
-Lint and test	Install dependencies	2026-10-27T19:40:20.4438216Z Installing collected packages: nose, zipp, Six, pyflakes, pycodestyle, mccabe, MarkupSafe, itsdangerous, gunicorn, click, Werkzeug, Jinja2, importlib-metadata, flake8, Flask, Flask-Cors
-Lint and test	Install dependencies	2026-10-27T19:40:21.0535031Z 
-Lint and test	Install dependencies	2026-10-27T19:40:21.0571850Z Successfully installed Flask-2.2.5 Flask-Cors-3.0.10 Jinja2-3.1.6 MarkupSafe-3.0.4 Six-1.17.0 Werkzeug-2.2.3 click-8.1.8 flake8-6.0.0 gunicorn-20.1.0 importlib-metadata-8.7.1 itsdangerous-2.2.0 mccabe-0.7.0 nose-1.3.7 pycodestyle-2.10.0 pyflakes-3.0.1 zipp-3.23.1
-Lint and test	Lint with flake8	﻿2026-10-27T19:40:21.1074278Z ##[group]Run flake8 app.py tests --count --statistics
-Lint and test	Lint with flake8	2026-10-27T19:40:21.1074754Z ^[[36;1mflake8 app.py tests --count --statistics^[[0m
-Lint and test	Lint with flake8	2026-10-27T19:40:21.1148703Z shell: /usr/bin/bash -e {0}
-Lint and test	Lint with flake8	2026-10-27T19:40:21.1149015Z env:
-Lint and test	Lint with flake8	2026-10-27T19:40:21.1149332Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
-Lint and test	Lint with flake8	2026-10-27T19:40:21.1149879Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
-Lint and test	Lint with flake8	2026-10-27T19:40:21.1150407Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-Lint and test	Lint with flake8	2026-10-27T19:40:21.1150884Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-Lint and test	Lint with flake8	2026-10-27T19:40:21.1151365Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-Lint and test	Lint with flake8	2026-10-27T19:40:21.1151871Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
-Lint and test	Lint with flake8	2026-10-27T19:40:21.1152272Z ##[endgroup]
-Lint and test	Lint with flake8	2026-10-27T19:40:21.3313649Z 0
-Lint and test	Run unit tests with nose	﻿2026-10-27T19:40:21.3485358Z ##[group]Run nosetests -v tests
-Lint and test	Run unit tests with nose	2026-10-27T19:40:21.3485699Z ^[[36;1mnosetests -v tests^[[0m
-Lint and test	Run unit tests with nose	2026-10-27T19:40:21.3559873Z shell: /usr/bin/bash -e {0}
-Lint and test	Run unit tests with nose	2026-10-27T19:40:21.3560164Z env:
-Lint and test	Run unit tests with nose	2026-10-27T19:40:21.3560480Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
-Lint and test	Run unit tests with nose	2026-10-27T19:40:21.3561022Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
-Lint and test	Run unit tests with nose	2026-10-27T19:40:21.3561553Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-Lint and test	Run unit tests with nose	2026-10-27T19:40:21.3562015Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-Lint and test	Run unit tests with nose	2026-10-27T19:40:21.3562479Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-Lint and test	Run unit tests with nose	2026-10-27T19:40:21.3562947Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
-Lint and test	Run unit tests with nose	2026-10-27T19:40:21.3563566Z ##[endgroup]
-Lint and test	Run unit tests with nose	2026-10-27T19:40:21.6791557Z test_counter_can_be_incremented_and_reset (tests.test_app.CounterServiceTest) ... ok
-Lint and test	Run unit tests with nose	2026-10-27T19:40:21.6798993Z test_health_returns_ok (tests.test_app.CounterServiceTest) ... ok
-Lint and test	Run unit tests with nose	2026-10-27T19:40:21.6806768Z test_index_returns_service_metadata (tests.test_app.CounterServiceTest) ... ok
-Lint and test	Run unit tests with nose	2026-10-27T19:40:21.6807779Z 
-Lint and test	Run unit tests with nose	2026-10-27T19:40:21.6808114Z ----------------------------------------------------------------------
-Lint and test	Run unit tests with nose	2026-10-27T19:40:21.6808590Z Ran 3 tests in 0.008s
-Lint and test	Run unit tests with nose	2026-10-27T19:40:21.6808773Z 
-Lint and test	Run unit tests with nose	2026-10-27T19:40:21.6808876Z OK
-Lint and test	Build Docker image	﻿2026-10-27T19:40:21.7107326Z ##[group]Run docker build -t counter-service:ee933a23c3c493420bcbaec0dc5ffbb74a99f6b6 .
-Lint and test	Build Docker image	2026-10-27T19:40:21.7108020Z ^[[36;1mdocker build -t counter-service:ee933a23c3c493420bcbaec0dc5ffbb74a99f6b6 .^[[0m
-Lint and test	Build Docker image	2026-10-27T19:40:21.7180098Z shell: /usr/bin/bash -e {0}
-Lint and test	Build Docker image	2026-10-27T19:40:21.7180396Z env:
-Lint and test	Build Docker image	2026-10-27T19:40:21.7180706Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
-Lint and test	Build Docker image	2026-10-27T19:40:21.7181240Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
-Lint and test	Build Docker image	2026-10-27T19:40:21.7181772Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-Lint and test	Build Docker image	2026-10-27T19:40:21.7182233Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-Lint and test	Build Docker image	2026-10-27T19:40:21.7182692Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-Lint and test	Build Docker image	2026-10-27T19:40:21.7183178Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
-Lint and test	Build Docker image	2026-10-27T19:40:21.7183889Z ##[endgroup]
-Lint and test	Build Docker image	2026-10-27T19:40:22.3227342Z #0 building with "default" instance using docker driver
-Lint and test	Build Docker image	2026-10-27T19:40:22.3227933Z 
-Lint and test	Build Docker image	2026-10-27T19:40:22.3228242Z #1 [internal] load build definition from Dockerfile
-Lint and test	Build Docker image	2026-10-27T19:40:22.3229019Z #1 transferring dockerfile: 349B done
-Lint and test	Build Docker image	2026-10-27T19:40:22.3229433Z #1 DONE 0.0s
-Lint and test	Build Docker image	2026-10-27T19:40:22.3229588Z 
-Lint and test	Build Docker image	2026-10-27T19:40:22.3229815Z #2 [internal] load metadata for docker.io/library/python:3.9-slim
-Lint and test	Build Docker image	2026-10-27T19:40:22.5498212Z #2 ...
-Lint and test	Build Docker image	2026-10-27T19:40:22.5498465Z 
-Lint and test	Build Docker image	2026-10-27T19:40:22.5498833Z #3 [auth] library/python:pull token for registry-1.docker.io
-Lint and test	Build Docker image	2026-10-27T19:40:22.5499484Z #3 DONE 0.0s
-Lint and test	Build Docker image	2026-10-27T19:40:22.6992937Z 
-Lint and test	Build Docker image	2026-10-27T19:40:22.6993474Z #2 [internal] load metadata for docker.io/library/python:3.9-slim
-Lint and test	Build Docker image	2026-10-27T19:40:23.0636778Z #2 DONE 0.9s
-Lint and test	Build Docker image	2026-10-27T19:40:23.1878868Z 
-Lint and test	Build Docker image	2026-10-27T19:40:23.1879361Z #4 [internal] load .dockerignore
-Lint and test	Build Docker image	2026-10-27T19:40:23.1880409Z #4 transferring context: 114B done
-Lint and test	Build Docker image	2026-10-27T19:40:23.1880992Z #4 DONE 0.0s
-Lint and test	Build Docker image	2026-10-27T19:40:23.1881213Z 
-Lint and test	Build Docker image	2026-10-27T19:40:23.1881397Z #5 [internal] load build context
-Lint and test	Build Docker image	2026-10-27T19:40:23.1882541Z #5 transferring context: 69.08kB done
-Lint and test	Build Docker image	2026-10-27T19:40:23.1883356Z #5 DONE 0.0s
-Lint and test	Build Docker image	2026-10-27T19:40:23.1883579Z 
-Lint and test	Build Docker image	2026-10-27T19:40:23.1884972Z #6 [1/5] FROM docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
-Lint and test	Build Docker image	2026-10-27T19:40:23.1886707Z #6 resolve docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b done
-Lint and test	Build Docker image	2026-10-27T19:40:23.1888125Z #6 sha256:085da638e1b8a449514c3fda83ff50a3bffae4418b050cfacd87e5722071f497 5.40kB / 5.40kB done
-Lint and test	Build Docker image	2026-10-27T19:40:23.1889410Z #6 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 6.29MB / 29.78MB 0.1s
-Lint and test	Build Docker image	2026-10-27T19:40:23.1890629Z #6 sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 0B / 1.29MB 0.1s
-Lint and test	Build Docker image	2026-10-27T19:40:23.1891837Z #6 sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 0B / 13.88MB 0.1s
-Lint and test	Build Docker image	2026-10-27T19:40:23.1893043Z #6 sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b 10.36kB / 10.36kB done
-Lint and test	Build Docker image	2026-10-27T19:40:23.1894563Z #6 sha256:dad5b29e3506c35e0fd222736f4d4ef25d21b219acdd73f7bb41d59996ca8e0d 1.74kB / 1.74kB done
-Lint and test	Build Docker image	2026-10-27T19:40:23.3073587Z #6 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 29.78MB / 29.78MB 0.2s done
-Lint and test	Build Docker image	2026-10-27T19:40:23.3075239Z #6 sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 1.29MB / 1.29MB 0.2s done
-Lint and test	Build Docker image	2026-10-27T19:40:23.3076470Z #6 sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 0B / 251B 0.2s
-Lint and test	Build Docker image	2026-10-27T19:40:23.3077545Z #6 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d
-Lint and test	Build Docker image	2026-10-27T19:40:23.4096541Z #6 sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 13.88MB / 13.88MB 0.3s done
-Lint and test	Build Docker image	2026-10-27T19:40:23.4098219Z #6 sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 251B / 251B 0.3s done
-Lint and test	Build Docker image	2026-10-27T19:40:24.3351689Z #6 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 0.9s done
-Lint and test	Build Docker image	2026-10-27T19:40:24.3352601Z #6 extracting sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 0.1s done
-Lint and test	Build Docker image	2026-10-27T19:40:25.7890011Z #6 extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08
-Lint and test	Build Docker image	2026-10-27T19:40:26.5499492Z #6 extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 0.7s done
-Lint and test	Build Docker image	2026-10-27T19:40:26.5501094Z #6 extracting sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 done
-Lint and test	Build Docker image	2026-10-27T19:40:26.5502124Z #6 DONE 3.5s
-Lint and test	Build Docker image	2026-10-27T19:40:26.7155277Z 
-Lint and test	Build Docker image	2026-10-27T19:40:26.7155803Z #7 [2/5] WORKDIR /app
-Lint and test	Build Docker image	2026-10-27T19:40:26.7156347Z #7 DONE 0.0s
-Lint and test	Build Docker image	2026-10-27T19:40:26.7156594Z 
-Lint and test	Build Docker image	2026-10-27T19:40:26.7156820Z #8 [3/5] COPY requirements.txt .
-Lint and test	Build Docker image	2026-10-27T19:40:26.7157349Z #8 DONE 0.0s
-Lint and test	Build Docker image	2026-10-27T19:40:26.7157642Z 
-Lint and test	Build Docker image	2026-10-27T19:40:26.7157930Z #9 [4/5] RUN pip install --no-cache-dir -r requirements.txt
-Lint and test	Build Docker image	2026-10-27T19:40:28.1788194Z #9 1.614 Collecting Flask==2.2.5
-Lint and test	Build Docker image	2026-10-27T19:40:28.2942126Z #9 1.631   Downloading Flask-2.2.5-py3-none-any.whl (101 kB)
-Lint and test	Build Docker image	2026-10-27T19:40:28.2944413Z #9 1.637      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.8/101.8 kB 27.5 MB/s eta 0:00:00
-Lint and test	Build Docker image	2026-10-27T19:40:28.2945877Z #9 1.690 Collecting Werkzeug==2.2.3
-Lint and test	Build Docker image	2026-10-27T19:40:28.2947118Z #9 1.694   Downloading Werkzeug-2.2.3-py3-none-any.whl (233 kB)
-Lint and test	Build Docker image	2026-10-27T19:40:28.2948467Z #9 1.698      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 233.6/233.6 kB 183.8 MB/s eta 0:00:00
-Lint and test	Build Docker image	2026-10-27T19:40:28.2949084Z #9 1.729 Collecting Flask-Cors==3.0.10
-Lint and test	Build Docker image	2026-10-27T19:40:28.4054643Z #9 1.734   Downloading Flask_Cors-3.0.10-py2.py3-none-any.whl (14 kB)
-Lint and test	Build Docker image	2026-10-27T19:40:28.4055460Z #9 1.768 Collecting gunicorn==20.1.0
-Lint and test	Build Docker image	2026-10-27T19:40:28.4056126Z #9 1.771   Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)
-Lint and test	Build Docker image	2026-10-27T19:40:28.4057196Z #9 1.774      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 187.2 MB/s eta 0:00:00
-Lint and test	Build Docker image	2026-10-27T19:40:28.4057921Z #9 1.789 Collecting nose==1.3.7
-Lint and test	Build Docker image	2026-10-27T19:40:28.4058496Z #9 1.793   Downloading nose-1.3.7-py3-none-any.whl (154 kB)
-Lint and test	Build Docker image	2026-10-27T19:40:28.4059437Z #9 1.795      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 154.7/154.7 kB 232.9 MB/s eta 0:00:00
-Lint and test	Build Docker image	2026-10-27T19:40:28.4060151Z #9 1.841 Collecting flake8==6.0.0
-Lint and test	Build Docker image	2026-10-27T19:40:28.5145598Z #9 1.845   Downloading flake8-6.0.0-py2.py3-none-any.whl (57 kB)
-Lint and test	Build Docker image	2026-10-27T19:40:28.5146942Z #9 1.847      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.8/57.8 kB 209.0 MB/s eta 0:00:00
-Lint and test	Build Docker image	2026-10-27T19:40:28.5147711Z #9 1.882 Collecting Jinja2>=3.0
-Lint and test	Build Docker image	2026-10-27T19:40:28.5148527Z #9 1.886   Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
-Lint and test	Build Docker image	2026-10-27T19:40:28.5149648Z #9 1.888      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 232.2 MB/s eta 0:00:00
-Lint and test	Build Docker image	2026-10-27T19:40:28.5150350Z #9 1.925 Collecting click>=8.0
-Lint and test	Build Docker image	2026-10-27T19:40:28.5151122Z #9 1.929   Downloading click-8.1.8-py3-none-any.whl (98 kB)
-Lint and test	Build Docker image	2026-10-27T19:40:28.5152203Z #9 1.932      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.2/98.2 kB 202.4 MB/s eta 0:00:00
-Lint and test	Build Docker image	2026-10-27T19:40:28.5152922Z #9 1.950 Collecting itsdangerous>=2.0
-Lint and test	Build Docker image	2026-10-27T19:40:28.7545949Z #9 1.953   Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
-Lint and test	Build Docker image	2026-10-27T19:40:28.7546918Z #9 2.036 Collecting importlib-metadata>=3.6.0
-Lint and test	Build Docker image	2026-10-27T19:40:28.7547562Z #9 2.039   Downloading importlib_metadata-8.7.1-py3-none-any.whl (27 kB)
-Lint and test	Build Docker image	2026-10-27T19:40:28.7779894Z #9 2.213 Collecting MarkupSafe>=2.1.1
-Lint and test	Build Docker image	2026-10-27T19:40:28.8959621Z #9 2.217   Downloading markupsafe-3.0.4-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
-Lint and test	Build Docker image	2026-10-27T19:40:28.8961237Z #9 2.238 Collecting Six
-Lint and test	Build Docker image	2026-10-27T19:40:28.8962142Z #9 2.241   Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
-Lint and test	Build Docker image	2026-10-27T19:40:28.8963863Z #9 2.254 Requirement already satisfied: setuptools>=3.0 in /usr/local/lib/python3.9/site-packages (from gunicorn==20.1.0->-r requirements.txt (line 4)) (79.0.1)
-Lint and test	Build Docker image	2026-10-27T19:40:28.8965636Z #9 2.273 Collecting mccabe<0.8.0,>=0.7.0
-Lint and test	Build Docker image	2026-10-27T19:40:28.8966312Z #9 2.276   Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
-Lint and test	Build Docker image	2026-10-27T19:40:28.8967047Z #9 2.298 Collecting pycodestyle<2.11.0,>=2.10.0
-Lint and test	Build Docker image	2026-10-27T19:40:28.8967800Z #9 2.301   Downloading pycodestyle-2.10.0-py2.py3-none-any.whl (41 kB)
-Lint and test	Build Docker image	2026-10-27T19:40:28.8969313Z #9 2.304      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.3/41.3 kB 138.6 MB/s eta 0:00:00
-Lint and test	Build Docker image	2026-10-27T19:40:28.8970061Z #9 2.331 Collecting pyflakes<3.1.0,>=3.0.0
-Lint and test	Build Docker image	2026-10-27T19:40:29.1177070Z #9 2.335   Downloading pyflakes-3.0.1-py2.py3-none-any.whl (62 kB)
-Lint and test	Build Docker image	2026-10-27T19:40:29.1178517Z #9 2.338      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 kB 211.1 MB/s eta 0:00:00
-Lint and test	Build Docker image	2026-10-27T19:40:29.1179384Z #9 2.399 Collecting zipp>=3.20
-Lint and test	Build Docker image	2026-10-27T19:40:29.1180100Z #9 2.402   Downloading zipp-3.23.1-py3-none-any.whl (10 kB)
-Lint and test	Build Docker image	2026-10-27T19:40:29.1284079Z #9 2.561 Installing collected packages: nose, zipp, Six, pyflakes, pycodestyle, mccabe, MarkupSafe, itsdangerous, gunicorn, click, Werkzeug, Jinja2, importlib-metadata, flake8, Flask, Flask-Cors
-Lint and test	Build Docker image	2026-10-27T19:40:29.7675001Z #9 3.202 Successfully installed Flask-2.2.5 Flask-Cors-3.0.10 Jinja2-3.1.6 MarkupSafe-3.0.4 Six-1.17.0 Werkzeug-2.2.3 click-8.1.8 flake8-6.0.0 gunicorn-20.1.0 importlib-metadata-8.7.1 itsdangerous-2.2.0 mccabe-0.7.0 nose-1.3.7 pycodestyle-2.10.0 pyflakes-3.0.1 zipp-3.23.1
-Lint and test	Build Docker image	2026-10-27T19:40:29.9538705Z #9 3.203 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
-Lint and test	Build Docker image	2026-10-27T19:40:29.9541144Z #9 3.288 
-Lint and test	Build Docker image	2026-10-27T19:40:29.9542535Z #9 3.288 [notice] A new release of pip is available: 23.0.1 -> 26.0.1
-Lint and test	Build Docker image	2026-10-27T19:40:29.9543603Z #9 3.288 [notice] To update, run: pip install --upgrade pip
-Lint and test	Build Docker image	2026-10-27T19:40:29.9544310Z #9 DONE 3.4s
-Lint and test	Build Docker image	2026-10-27T19:40:30.1209186Z 
-Lint and test	Build Docker image	2026-10-27T19:40:30.1244323Z #10 [5/5] COPY . .
-Lint and test	Build Docker image	2026-10-27T19:40:30.1245043Z #10 DONE 0.0s
-Lint and test	Build Docker image	2026-10-27T19:40:30.1245539Z 
-Lint and test	Build Docker image	2026-10-27T19:40:30.1245883Z #11 exporting to image
-Lint and test	Build Docker image	2026-10-27T19:40:30.1246513Z #11 exporting layers
-Lint and test	Build Docker image	2026-10-27T19:40:30.4285562Z #11 exporting layers 0.5s done
-Lint and test	Build Docker image	2026-10-27T19:40:30.4463010Z #11 writing image sha256:f0895ef8cf90347913cb2766575d23b228ed224b80e67841f99da18850af641d done
-Lint and test	Build Docker image	2026-10-27T19:40:30.4464436Z #11 naming to docker.io/library/counter-service:ee933a23c3c493420bcbaec0dc5ffbb74a99f6b6 done
-Lint and test	Build Docker image	2026-10-27T19:40:30.4464905Z #11 DONE 0.5s
-Lint and test	Post Set up Python 3.9	﻿2026-10-27T19:40:30.4676103Z Post job cleanup.
-Lint and test	Post Set up Python 3.9	2026-10-27T19:40:30.5925104Z Cache hit occurred on the primary key setup-python-Linux-x64-22.04-Ubuntu-python-3.9.25-pip-dd868feff71aefd518771d7701f6866b300523c93606792d3ac48991462021a4, not saving cache.
-Lint and test	Post Set up Python 3.9	2026-10-27T19:40:30.5927358Z (node:2484) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-Lint and test	Post Set up Python 3.9	2026-10-27T19:40:30.5928587Z (Use `node --trace-deprecation ...` to show where the warning was created)
-Lint and test	Post Checkout repository	﻿2026-10-27T19:40:30.6080561Z Post job cleanup.
-Lint and test	Post Checkout repository	2026-10-27T19:40:30.6961895Z [command]/usr/bin/git version
-Lint and test	Post Checkout repository	2026-10-27T19:40:30.7009809Z git version 2.55.0
-Lint and test	Post Checkout repository	2026-10-27T19:40:30.7048588Z Temporarily overriding HOME='/home/runner/work/_temp/f4d2f2e0-9ada-4402-8355-13dc301a9af1' before making global git config changes
-Lint and test	Post Checkout repository	2026-10-27T19:40:30.7050067Z Adding repository directory to the temporary git global config as a safe directory
-Lint and test	Post Checkout repository	2026-10-27T19:40:30.7054269Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ci-cd-final-project/ci-cd-final-project
-Lint and test	Post Checkout repository	2026-10-27T19:40:30.7097242Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-Lint and test	Post Checkout repository	2026-10-27T19:40:30.7157203Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-Lint and test	Post Checkout repository	2026-10-27T19:40:30.7447676Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-Lint and test	Post Checkout repository	2026-10-27T19:40:30.7491799Z http.https://github.com/.extraheader
-Lint and test	Post Checkout repository	2026-10-27T19:40:30.7503581Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
-Lint and test	Post Checkout repository	2026-10-27T19:40:30.7535738Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-Lint and test	Post Checkout repository	2026-10-27T19:40:30.7924896Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-Lint and test	Post Checkout repository	2026-10-27T19:40:30.7996368Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-Lint and test	Complete job	﻿2026-10-27T19:40:30.8440050Z Cleaning up orphan processes
-Lint and test	Complete job	2026-10-27T19:40:30.8986705Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Container build	Set up job	﻿2026-10-27T20:04:42.2018531Z Current runner version: '2.338.0'
+Container build	Set up job	2026-10-27T20:04:42.2046385Z ##[group]Runner Image Provisioner
+Container build	Set up job	2026-10-27T20:04:42.2047298Z Hosted Compute Agent
+Container build	Set up job	2026-10-27T20:04:42.2048104Z Version: 20261021.618
+Container build	Set up job	2026-10-27T20:04:42.2048762Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+Container build	Set up job	2026-10-27T20:04:42.2049494Z Build Date: 2026-10-21T00:45:21Z
+Container build	Set up job	2026-10-27T20:04:42.2050364Z Worker ID: {1b578af0-910b-47a6-96cb-e3ff72d8af9c}
+Container build	Set up job	2026-10-27T20:04:42.2051116Z Region: westcentralus
+Container build	Set up job	2026-10-27T20:04:42.2051776Z Cloud: Azure
+Container build	Set up job	2026-10-27T20:04:42.2052367Z ##[endgroup]
+Container build	Set up job	2026-10-27T20:04:42.2055020Z ##[group]Operating System
+Container build	Set up job	2026-10-27T20:04:42.2055895Z Ubuntu
+Container build	Set up job	2026-10-27T20:04:42.2056468Z 22.04.5
+Container build	Set up job	2026-10-27T20:04:42.2057099Z LTS
+Container build	Set up job	2026-10-27T20:04:42.2057675Z ##[endgroup]
+Container build	Set up job	2026-10-27T20:04:42.2058295Z ##[group]Runner Image
+Container build	Set up job	2026-10-27T20:04:42.2058982Z Image: ubuntu-22.04
+Container build	Set up job	2026-10-27T20:04:42.2059595Z Version: 20261012.322.1
+Container build	Set up job	2026-10-27T20:04:42.2060673Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20261012.322/images/ubuntu/Ubuntu2204-Readme.md
+Container build	Set up job	2026-10-27T20:04:42.2063010Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20261012.322
+Container build	Set up job	2026-10-27T20:04:42.2064148Z ##[endgroup]
+Container build	Set up job	2026-10-27T20:04:42.2065330Z ##[group]GITHUB_TOKEN Permissions
+Container build	Set up job	2026-10-27T20:04:42.2067638Z Contents: read
+Container build	Set up job	2026-10-27T20:04:42.2068290Z Metadata: read
+Container build	Set up job	2026-10-27T20:04:42.2069247Z ##[endgroup]
+Container build	Set up job	2026-10-27T20:04:42.2071683Z Secret source: Actions
+Container build	Set up job	2026-10-27T20:04:42.2073061Z Cache mode: write
+Container build	Set up job	2026-10-27T20:04:42.2074265Z Prepare workflow directory
+Container build	Set up job	2026-10-27T20:04:42.2518238Z Prepare all required actions
+Container build	Set up job	2026-10-27T20:04:42.2569703Z Getting action download info
+Container build	Set up job	2026-10-27T20:04:42.5519928Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Container build	Set up job	2026-10-27T20:04:42.7045695Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+Container build	Set up job	2026-10-27T20:04:43.6177273Z Complete job name: Container build
+Container build	Initialize containers	﻿2026-10-27T20:04:43.6850848Z ##[group]Checking docker version
+Container build	Initialize containers	2026-10-27T20:04:43.6865080Z ##[command]/usr/bin/docker version --format '{{.Server.APIVersion}}'
+Container build	Initialize containers	2026-10-27T20:04:44.8299575Z '1.48'
+Container build	Initialize containers	2026-10-27T20:04:44.8325531Z Docker daemon API version: '1.48'
+Container build	Initialize containers	2026-10-27T20:04:44.8326955Z ##[command]/usr/bin/docker version --format '{{.Client.APIVersion}}'
+Container build	Initialize containers	2026-10-27T20:04:44.8543545Z '1.48'
+Container build	Initialize containers	2026-10-27T20:04:44.8564993Z Docker client API version: '1.48'
+Container build	Initialize containers	2026-10-27T20:04:44.8572038Z ##[endgroup]
+Container build	Initialize containers	2026-10-27T20:04:44.8576417Z ##[group]Clean up resources from previous jobs
+Container build	Initialize containers	2026-10-27T20:04:44.8582907Z ##[command]/usr/bin/docker ps --all --quiet --no-trunc --filter "label=8d48c9"
+Container build	Initialize containers	2026-10-27T20:04:44.8859196Z ##[command]/usr/bin/docker network prune --force --filter "label=8d48c9"
+Container build	Initialize containers	2026-10-27T20:04:44.9082344Z ##[endgroup]
+Container build	Initialize containers	2026-10-27T20:04:44.9084091Z ##[group]Create local container network
+Container build	Initialize containers	2026-10-27T20:04:44.9097632Z ##[command]/usr/bin/docker network create --label 8d48c9 github_network_0542914cb0304d88a9851174047b9cb0
+Container build	Initialize containers	2026-10-27T20:04:44.9664288Z bfdfb58409a91f481d5afc512c46186bb5511ac7386ef6fcb3748647cfb964b6
+Container build	Initialize containers	2026-10-27T20:04:44.9686327Z ##[endgroup]
+Container build	Initialize containers	2026-10-27T20:04:44.9713235Z ##[group]Starting job container
+Container build	Initialize containers	2026-10-27T20:04:44.9737375Z ##[command]/usr/bin/docker pull python:3.9
+Container build	Initialize containers	2026-10-27T20:04:45.7075220Z 3.9: Pulling from library/python
+Container build	Initialize containers	2026-10-27T20:04:45.9098933Z 795dbedde24d: Pulling fs layer
+Container build	Initialize containers	2026-10-27T20:04:45.9099975Z 89d573bf42b3: Pulling fs layer
+Container build	Initialize containers	2026-10-27T20:04:45.9100616Z 26dfe2fac1c4: Pulling fs layer
+Container build	Initialize containers	2026-10-27T20:04:45.9101389Z 79d5bd8a8d26: Pulling fs layer
+Container build	Initialize containers	2026-10-27T20:04:45.9102008Z 081ccf923272: Pulling fs layer
+Container build	Initialize containers	2026-10-27T20:04:45.9102825Z c9723aa529b0: Pulling fs layer
+Container build	Initialize containers	2026-10-27T20:04:45.9103453Z 91c91c91f1d2: Pulling fs layer
+Container build	Initialize containers	2026-10-27T20:04:45.9104040Z 081ccf923272: Waiting
+Container build	Initialize containers	2026-10-27T20:04:45.9104630Z c9723aa529b0: Waiting
+Container build	Initialize containers	2026-10-27T20:04:45.9105157Z 91c91c91f1d2: Waiting
+Container build	Initialize containers	2026-10-27T20:04:45.9105717Z 79d5bd8a8d26: Waiting
+Container build	Initialize containers	2026-10-27T20:04:46.3067549Z 89d573bf42b3: Verifying Checksum
+Container build	Initialize containers	2026-10-27T20:04:46.3068621Z 89d573bf42b3: Download complete
+Container build	Initialize containers	2026-10-27T20:04:46.4095579Z 795dbedde24d: Verifying Checksum
+Container build	Initialize containers	2026-10-27T20:04:46.4097141Z 795dbedde24d: Download complete
+Container build	Initialize containers	2026-10-27T20:04:46.4900527Z 26dfe2fac1c4: Verifying Checksum
+Container build	Initialize containers	2026-10-27T20:04:46.4901797Z 26dfe2fac1c4: Download complete
+Container build	Initialize containers	2026-10-27T20:04:46.7361853Z 081ccf923272: Verifying Checksum
+Container build	Initialize containers	2026-10-27T20:04:46.7363368Z 081ccf923272: Download complete
+Container build	Initialize containers	2026-10-27T20:04:46.8900790Z c9723aa529b0: Verifying Checksum
+Container build	Initialize containers	2026-10-27T20:04:46.8901340Z c9723aa529b0: Download complete
+Container build	Initialize containers	2026-10-27T20:04:46.9313126Z 91c91c91f1d2: Verifying Checksum
+Container build	Initialize containers	2026-10-27T20:04:46.9314118Z 91c91c91f1d2: Download complete
+Container build	Initialize containers	2026-10-27T20:04:47.5377355Z 79d5bd8a8d26: Verifying Checksum
+Container build	Initialize containers	2026-10-27T20:04:47.5378012Z 79d5bd8a8d26: Download complete
+Container build	Initialize containers	2026-10-27T20:04:48.2078450Z 795dbedde24d: Pull complete
+Container build	Initialize containers	2026-10-27T20:04:49.9190090Z 89d573bf42b3: Pull complete
+Container build	Initialize containers	2026-10-27T20:04:52.5105506Z 26dfe2fac1c4: Pull complete
+Container build	Initialize containers	2026-10-27T20:05:00.3072116Z 79d5bd8a8d26: Pull complete
+Container build	Initialize containers	2026-10-27T20:05:00.5961902Z 081ccf923272: Pull complete
+Container build	Initialize containers	2026-10-27T20:05:01.3925052Z c9723aa529b0: Pull complete
+Container build	Initialize containers	2026-10-27T20:05:01.4036065Z 91c91c91f1d2: Pull complete
+Container build	Initialize containers	2026-10-27T20:05:01.4087983Z Digest: sha256:da5aee29682d12a6649f51c8d6f15b87deb3e6c524b923c41d0cb3304d07c913
+Container build	Initialize containers	2026-10-27T20:05:01.4104414Z Status: Downloaded newer image for python:3.9
+Container build	Initialize containers	2026-10-27T20:05:01.4118438Z docker.io/library/python:3.9
+Container build	Initialize containers	2026-10-27T20:05:01.4203737Z ##[command]/usr/bin/docker create --name 165bcf2caa074b36b6afd6f4bba6fe38_python39_b73a8d --label 8d48c9 --workdir /__w/ci-cd-final-project/ci-cd-final-project --network github_network_0542914cb0304d88a9851174047b9cb0  -e "HOME=/github/home" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work":"/__w" -v "/home/runner/actions-runner/cached/2.338.0/externals":"/__e":ro -v "/home/runner/work/_temp":"/__w/_temp" -v "/home/runner/work/_actions":"/__w/_actions" -v "/opt/hostedtoolcache":"/__t" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" --entrypoint "tail" python:3.9 "-f" "/dev/null"
+Container build	Initialize containers	2026-10-27T20:05:01.4493950Z cc871f11c4f43ae8e4b8a0bf7d4ce5799d8927f67545b4125b8e79f958e05c28
+Container build	Initialize containers	2026-10-27T20:05:01.4523494Z ##[command]/usr/bin/docker start cc871f11c4f43ae8e4b8a0bf7d4ce5799d8927f67545b4125b8e79f958e05c28
+Container build	Initialize containers	2026-10-27T20:05:02.4517954Z cc871f11c4f43ae8e4b8a0bf7d4ce5799d8927f67545b4125b8e79f958e05c28
+Container build	Initialize containers	2026-10-27T20:05:02.4540854Z ##[command]/usr/bin/docker ps --all --filter id=cc871f11c4f43ae8e4b8a0bf7d4ce5799d8927f67545b4125b8e79f958e05c28 --filter status=running --no-trunc --format "{{.ID}} {{.Status}}"
+Container build	Initialize containers	2026-10-27T20:05:02.4696945Z cc871f11c4f43ae8e4b8a0bf7d4ce5799d8927f67545b4125b8e79f958e05c28 Up Less than a second
+Container build	Initialize containers	2026-10-27T20:05:02.4720252Z ##[command]/usr/bin/docker inspect --format "{{range .Config.Env}}{{println .}}{{end}}" cc871f11c4f43ae8e4b8a0bf7d4ce5799d8927f67545b4125b8e79f958e05c28
+Container build	Initialize containers	2026-10-27T20:05:02.4880417Z HOME=/github/home
+Container build	Initialize containers	2026-10-27T20:05:02.4880890Z GITHUB_ACTIONS=true
+Container build	Initialize containers	2026-10-27T20:05:02.4881185Z CI=true
+Container build	Initialize containers	2026-10-27T20:05:02.4881517Z PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Container build	Initialize containers	2026-10-27T20:05:02.4881951Z LANG=C.UTF-8
+Container build	Initialize containers	2026-10-27T20:05:02.4882204Z GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568
+Container build	Initialize containers	2026-10-27T20:05:02.4882764Z PYTHON_VERSION=3.9.25
+Container build	Initialize containers	2026-10-27T20:05:02.4883136Z PYTHON_SHA256=00e07d7c0f2f0cc002432d1ee84d2a40dae404a99303e3f97701c10966c91834
+Container build	Initialize containers	2026-10-27T20:05:02.4908522Z ##[endgroup]
+Container build	Initialize containers	2026-10-27T20:05:02.4918280Z ##[group]Waiting for all services to be ready
+Container build	Initialize containers	2026-10-27T20:05:02.4920150Z ##[endgroup]
+Container build	Checkout repository	﻿2026-10-27T20:05:02.5227550Z ##[group]Run actions/checkout@v4
+Container build	Checkout repository	2026-10-27T20:05:02.5228189Z with:
+Container build	Checkout repository	2026-10-27T20:05:02.5228478Z   repository: PrathmeshVishwakarma/ci-cd-final-project
+Container build	Checkout repository	2026-10-27T20:05:02.5231199Z   token: ***
+Container build	Checkout repository	2026-10-27T20:05:02.5231408Z   ssh-strict: true
+Container build	Checkout repository	2026-10-27T20:05:02.5231615Z   ssh-user: git
+Container build	Checkout repository	2026-10-27T20:05:02.5231822Z   persist-credentials: true
+Container build	Checkout repository	2026-10-27T20:05:02.5232055Z   clean: true
+Container build	Checkout repository	2026-10-27T20:05:02.5232265Z   sparse-checkout-cone-mode: true
+Container build	Checkout repository	2026-10-27T20:05:02.5233159Z   fetch-depth: 1
+Container build	Checkout repository	2026-10-27T20:05:02.5233369Z   fetch-tags: false
+Container build	Checkout repository	2026-10-27T20:05:02.5233576Z   show-progress: true
+Container build	Checkout repository	2026-10-27T20:05:02.5233783Z   lfs: false
+Container build	Checkout repository	2026-10-27T20:05:02.5233965Z   submodules: false
+Container build	Checkout repository	2026-10-27T20:05:02.5234164Z   set-safe-directory: true
+Container build	Checkout repository	2026-10-27T20:05:02.5234402Z   allow-unsafe-pr-checkout: false
+Container build	Checkout repository	2026-10-27T20:05:02.5234986Z ##[endgroup]
+Container build	Checkout repository	2026-10-27T20:05:02.5302247Z ##[command]/usr/bin/docker exec  cc871f11c4f43ae8e4b8a0bf7d4ce5799d8927f67545b4125b8e79f958e05c28 sh -c "cat /etc/*release | grep ^ID"
+Container build	Checkout repository	2026-10-27T20:05:02.8414060Z Syncing repository: PrathmeshVishwakarma/ci-cd-final-project
+Container build	Checkout repository	2026-10-27T20:05:02.8415632Z ##[group]Getting Git version info
+Container build	Checkout repository	2026-10-27T20:05:02.8416064Z Working directory is '/__w/ci-cd-final-project/ci-cd-final-project'
+Container build	Checkout repository	2026-10-27T20:05:02.8416664Z [command]/usr/bin/git version
+Container build	Checkout repository	2026-10-27T20:05:02.8485482Z git version 2.47.3
+Container build	Checkout repository	2026-10-27T20:05:02.8601607Z ##[endgroup]
+Container build	Checkout repository	2026-10-27T20:05:02.8614314Z Temporarily overriding HOME='/__w/_temp/c96dadec-7074-491b-8230-a2ad4cb1ec96' before making global git config changes
+Container build	Checkout repository	2026-10-27T20:05:02.8615523Z Adding repository directory to the temporary git global config as a safe directory
+Container build	Checkout repository	2026-10-27T20:05:02.8616549Z [command]/usr/bin/git config --global --add safe.directory /__w/ci-cd-final-project/ci-cd-final-project
+Container build	Checkout repository	2026-10-27T20:05:02.8618247Z Deleting the contents of '/__w/ci-cd-final-project/ci-cd-final-project'
+Container build	Checkout repository	2026-10-27T20:05:02.8619353Z ##[group]Initializing the repository
+Container build	Checkout repository	2026-10-27T20:05:02.8620039Z [command]/usr/bin/git init /__w/ci-cd-final-project/ci-cd-final-project
+Container build	Checkout repository	2026-10-27T20:05:02.8703511Z hint: Using 'master' as the name for the initial branch. This default branch name
+Container build	Checkout repository	2026-10-27T20:05:02.8704572Z hint: is subject to change. To configure the initial branch name to use in all
+Container build	Checkout repository	2026-10-27T20:05:02.8705418Z hint: of your new repositories, which will suppress this warning, call:
+Container build	Checkout repository	2026-10-27T20:05:02.8706825Z hint:
+Container build	Checkout repository	2026-10-27T20:05:02.8707369Z hint: 	git config --global init.defaultBranch <name>
+Container build	Checkout repository	2026-10-27T20:05:02.8708805Z hint:
+Container build	Checkout repository	2026-10-27T20:05:02.8709398Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Container build	Checkout repository	2026-10-27T20:05:02.8711099Z hint: 'development'. The just-created branch can be renamed via this command:
+Container build	Checkout repository	2026-10-27T20:05:02.8712008Z hint:
+Container build	Checkout repository	2026-10-27T20:05:02.8712368Z hint: 	git branch -m <name>
+Container build	Checkout repository	2026-10-27T20:05:02.8713291Z Initialized empty Git repository in /__w/ci-cd-final-project/ci-cd-final-project/.git/
+Container build	Checkout repository	2026-10-27T20:05:02.8729482Z [command]/usr/bin/git remote add origin https://github.com/PrathmeshVishwakarma/ci-cd-final-project
+Container build	Checkout repository	2026-10-27T20:05:02.8769485Z ##[endgroup]
+Container build	Checkout repository	2026-10-27T20:05:02.8770170Z ##[group]Disabling automatic garbage collection
+Container build	Checkout repository	2026-10-27T20:05:02.8770761Z [command]/usr/bin/git config --local gc.auto 0
+Container build	Checkout repository	2026-10-27T20:05:02.8808157Z ##[endgroup]
+Container build	Checkout repository	2026-10-27T20:05:02.8808748Z ##[group]Setting up auth
+Container build	Checkout repository	2026-10-27T20:05:02.8824550Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Container build	Checkout repository	2026-10-27T20:05:02.8857917Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Container build	Checkout repository	2026-10-27T20:05:02.9225710Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Container build	Checkout repository	2026-10-27T20:05:02.9267818Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Container build	Checkout repository	2026-10-27T20:05:02.9619694Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Container build	Checkout repository	2026-10-27T20:05:02.9663401Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Container build	Checkout repository	2026-10-27T20:05:02.9971980Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Container build	Checkout repository	2026-10-27T20:05:03.0026992Z ##[endgroup]
+Container build	Checkout repository	2026-10-27T20:05:03.0028239Z ##[group]Fetching the repository
+Container build	Checkout repository	2026-10-27T20:05:03.0033542Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ccaec237004321dc24fd06455b1c870ec6b3d4c8:refs/remotes/origin/main
+Container build	Checkout repository	2026-10-27T20:05:03.4517382Z From https://github.com/PrathmeshVishwakarma/ci-cd-final-project
+Container build	Checkout repository	2026-10-27T20:05:03.4518044Z  * [new ref]         ccaec237004321dc24fd06455b1c870ec6b3d4c8 -> origin/main
+Container build	Checkout repository	2026-10-27T20:05:03.4529749Z ##[endgroup]
+Container build	Checkout repository	2026-10-27T20:05:03.4530438Z ##[group]Determining the checkout info
+Container build	Checkout repository	2026-10-27T20:05:03.4535194Z ##[endgroup]
+Container build	Checkout repository	2026-10-27T20:05:03.4540054Z [command]/usr/bin/git sparse-checkout disable
+Container build	Checkout repository	2026-10-27T20:05:03.4597928Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Container build	Checkout repository	2026-10-27T20:05:03.4641690Z ##[group]Checking out the ref
+Container build	Checkout repository	2026-10-27T20:05:03.4646737Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Container build	Checkout repository	2026-10-27T20:05:03.4733029Z Switched to a new branch 'main'
+Container build	Checkout repository	2026-10-27T20:05:03.4735402Z branch 'main' set up to track 'origin/main'.
+Container build	Checkout repository	2026-10-27T20:05:03.4750130Z ##[endgroup]
+Container build	Checkout repository	2026-10-27T20:05:03.4797165Z [command]/usr/bin/git log -1 --format=%H
+Container build	Checkout repository	2026-10-27T20:05:03.4831883Z ccaec237004321dc24fd06455b1c870ec6b3d4c8
+Container build	Setup Node.js	﻿2026-10-27T20:05:03.5139970Z ##[group]Run actions/setup-node@v4
+Container build	Setup Node.js	2026-10-27T20:05:03.5140296Z with:
+Container build	Setup Node.js	2026-10-27T20:05:03.5140487Z   node-version: 20
+Container build	Setup Node.js	2026-10-27T20:05:03.5140694Z   always-auth: false
+Container build	Setup Node.js	2026-10-27T20:05:03.5140905Z   check-latest: false
+Container build	Setup Node.js	2026-10-27T20:05:03.5143616Z   token: ***
+Container build	Setup Node.js	2026-10-27T20:05:03.5143829Z ##[endgroup]
+Container build	Setup Node.js	2026-10-27T20:05:03.5150654Z ##[command]/usr/bin/docker exec  cc871f11c4f43ae8e4b8a0bf7d4ce5799d8927f67545b4125b8e79f958e05c28 sh -c "cat /etc/*release | grep ^ID"
+Container build	Setup Node.js	2026-10-27T20:05:03.8408677Z Attempting to download 20...
+Container build	Setup Node.js	2026-10-27T20:05:03.8551552Z (node:144) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Container build	Setup Node.js	2026-10-27T20:05:03.8553320Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Container build	Setup Node.js	2026-10-27T20:05:04.9369129Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-linux-x64.tar.gz
+Container build	Setup Node.js	2026-10-27T20:05:05.5920558Z Extracting ...
+Container build	Setup Node.js	2026-10-27T20:05:05.6063863Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /__w/_temp/310cdddf-3b0e-48f7-a013-f65465842220 -f /__w/_temp/67e91c36-3ad4-43bf-855c-854c0f6e5876
+Container build	Setup Node.js	2026-10-27T20:05:06.6692433Z Adding to the cache ...
+Container build	Setup Node.js	2026-10-27T20:05:08.5115517Z ##[group]Environment details
+Container build	Setup Node.js	2026-10-27T20:05:08.6248680Z node: v20.20.2
+Container build	Setup Node.js	2026-10-27T20:05:08.6249725Z npm: 10.8.2
+Container build	Setup Node.js	2026-10-27T20:05:08.6250330Z yarn: 
+Container build	Setup Node.js	2026-10-27T20:05:08.6251348Z ##[endgroup]
+Container build	Install dependencies	﻿2026-10-27T20:05:08.6494267Z ##[group]Run python -m pip install --upgrade pip
+Container build	Install dependencies	2026-10-27T20:05:08.6494770Z ^[[36;1mpython -m pip install --upgrade pip^[[0m
+Container build	Install dependencies	2026-10-27T20:05:08.6495103Z ^[[36;1mpip install -r requirements.txt^[[0m
+Container build	Install dependencies	2026-10-27T20:05:08.6499101Z shell: sh -e {0}
+Container build	Install dependencies	2026-10-27T20:05:08.6499362Z ##[endgroup]
+Container build	Install dependencies	2026-10-27T20:05:10.2402259Z WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Container build	Install dependencies	2026-10-27T20:05:10.3411718Z Requirement already satisfied: pip in /usr/local/lib/python3.9/site-packages (23.0.1)
+Container build	Install dependencies	2026-10-27T20:05:10.5075313Z Collecting pip
+Container build	Install dependencies	2026-10-27T20:05:10.6708534Z   Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
+Container build	Install dependencies	2026-10-27T20:05:10.7887620Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 15.6 MB/s eta 0:00:00
+Container build	Install dependencies	2026-10-27T20:05:10.8575212Z Installing collected packages: pip
+Container build	Install dependencies	2026-10-27T20:05:10.8580753Z   Attempting uninstall: pip
+Container build	Install dependencies	2026-10-27T20:05:10.8588587Z     Found existing installation: pip 23.0.1
+Container build	Install dependencies	2026-10-27T20:05:11.0794917Z     Uninstalling pip-23.0.1:
+Container build	Install dependencies	2026-10-27T20:05:11.0999666Z       Successfully uninstalled pip-23.0.1
+Container build	Install dependencies	2026-10-27T20:05:12.0430428Z Successfully installed pip-26.0.1
+Container build	Install dependencies	2026-10-27T20:05:12.0435130Z WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+Container build	Install dependencies	2026-10-27T20:05:12.5500918Z WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Container build	Install dependencies	2026-10-27T20:05:12.7735269Z Collecting Flask==2.2.5 (from -r requirements.txt (line 1))
+Container build	Install dependencies	2026-10-27T20:05:12.8531679Z   Downloading Flask-2.2.5-py3-none-any.whl.metadata (3.9 kB)
+Container build	Install dependencies	2026-10-27T20:05:13.1888609Z Collecting Werkzeug==2.2.3 (from -r requirements.txt (line 2))
+Container build	Install dependencies	2026-10-27T20:05:13.2130253Z   Downloading Werkzeug-2.2.3-py3-none-any.whl.metadata (4.4 kB)
+Container build	Install dependencies	2026-10-27T20:05:13.2648561Z Collecting Flask-Cors==3.0.10 (from -r requirements.txt (line 3))
+Container build	Install dependencies	2026-10-27T20:05:13.2860511Z   Downloading Flask_Cors-3.0.10-py2.py3-none-any.whl.metadata (5.4 kB)
+Container build	Install dependencies	2026-10-27T20:05:13.3263580Z Collecting gunicorn==20.1.0 (from -r requirements.txt (line 4))
+Container build	Install dependencies	2026-10-27T20:05:13.3471813Z   Downloading gunicorn-20.1.0-py3-none-any.whl.metadata (3.8 kB)
+Container build	Install dependencies	2026-10-27T20:05:13.3751720Z Collecting nose==1.3.7 (from -r requirements.txt (line 5))
+Container build	Install dependencies	2026-10-27T20:05:13.3951579Z   Downloading nose-1.3.7-py3-none-any.whl.metadata (1.7 kB)
+Container build	Install dependencies	2026-10-27T20:05:13.4478636Z Collecting flake8==6.0.0 (from -r requirements.txt (line 6))
+Container build	Install dependencies	2026-10-27T20:05:13.4748106Z   Downloading flake8-6.0.0-py2.py3-none-any.whl.metadata (3.8 kB)
+Container build	Install dependencies	2026-10-27T20:05:13.5235406Z Collecting Jinja2>=3.0 (from Flask==2.2.5->-r requirements.txt (line 1))
+Container build	Install dependencies	2026-10-27T20:05:13.5441129Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Container build	Install dependencies	2026-10-27T20:05:13.5719459Z Collecting itsdangerous>=2.0 (from Flask==2.2.5->-r requirements.txt (line 1))
+Container build	Install dependencies	2026-10-27T20:05:13.5925000Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Container build	Install dependencies	2026-10-27T20:05:13.6288739Z Collecting click>=8.0 (from Flask==2.2.5->-r requirements.txt (line 1))
+Container build	Install dependencies	2026-10-27T20:05:13.6495586Z   Downloading click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+Container build	Install dependencies	2026-10-27T20:05:13.7056389Z Collecting importlib-metadata>=3.6.0 (from Flask==2.2.5->-r requirements.txt (line 1))
+Container build	Install dependencies	2026-10-27T20:05:13.7259140Z   Downloading importlib_metadata-8.7.1-py3-none-any.whl.metadata (4.7 kB)
+Container build	Install dependencies	2026-10-27T20:05:13.8412806Z Collecting MarkupSafe>=2.1.1 (from Werkzeug==2.2.3->-r requirements.txt (line 2))
+Container build	Install dependencies	2026-10-27T20:05:13.8629274Z   Downloading markupsafe-3.0.4-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Container build	Install dependencies	2026-10-27T20:05:13.8936491Z Collecting Six (from Flask-Cors==3.0.10->-r requirements.txt (line 3))
+Container build	Install dependencies	2026-10-27T20:05:13.9189463Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Container build	Install dependencies	2026-10-27T20:05:13.9209015Z Requirement already satisfied: setuptools>=3.0 in /usr/local/lib/python3.9/site-packages (from gunicorn==20.1.0->-r requirements.txt (line 4)) (79.0.1)
+Container build	Install dependencies	2026-10-27T20:05:13.9444758Z Collecting mccabe<0.8.0,>=0.7.0 (from flake8==6.0.0->-r requirements.txt (line 6))
+Container build	Install dependencies	2026-10-27T20:05:14.1407136Z   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+Container build	Install dependencies	2026-10-27T20:05:14.1675464Z Collecting pycodestyle<2.11.0,>=2.10.0 (from flake8==6.0.0->-r requirements.txt (line 6))
+Container build	Install dependencies	2026-10-27T20:05:14.1875932Z   Downloading pycodestyle-2.10.0-py2.py3-none-any.whl.metadata (31 kB)
+Container build	Install dependencies	2026-10-27T20:05:14.2333436Z Collecting pyflakes<3.1.0,>=3.0.0 (from flake8==6.0.0->-r requirements.txt (line 6))
+Container build	Install dependencies	2026-10-27T20:05:14.2539832Z   Downloading pyflakes-3.0.1-py2.py3-none-any.whl.metadata (3.8 kB)
+Container build	Install dependencies	2026-10-27T20:05:14.2879948Z Collecting zipp>=3.20 (from importlib-metadata>=3.6.0->Flask==2.2.5->-r requirements.txt (line 1))
+Container build	Install dependencies	2026-10-27T20:05:14.3082005Z   Downloading zipp-3.23.1-py3-none-any.whl.metadata (3.6 kB)
+Container build	Install dependencies	2026-10-27T20:05:14.3518611Z Downloading Flask-2.2.5-py3-none-any.whl (101 kB)
+Container build	Install dependencies	2026-10-27T20:05:14.5551355Z Downloading Werkzeug-2.2.3-py3-none-any.whl (233 kB)
+Container build	Install dependencies	2026-10-27T20:05:14.6653501Z Downloading Flask_Cors-3.0.10-py2.py3-none-any.whl (14 kB)
+Container build	Install dependencies	2026-10-27T20:05:14.6915777Z Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)
+Container build	Install dependencies	2026-10-27T20:05:14.7209137Z Downloading nose-1.3.7-py3-none-any.whl (154 kB)
+Container build	Install dependencies	2026-10-27T20:05:14.7707768Z Downloading flake8-6.0.0-py2.py3-none-any.whl (57 kB)
+Container build	Install dependencies	2026-10-27T20:05:14.7970400Z Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+Container build	Install dependencies	2026-10-27T20:05:14.8184772Z Downloading pycodestyle-2.10.0-py2.py3-none-any.whl (41 kB)
+Container build	Install dependencies	2026-10-27T20:05:14.8627329Z Downloading pyflakes-3.0.1-py2.py3-none-any.whl (62 kB)
+Container build	Install dependencies	2026-10-27T20:05:14.9165012Z Downloading click-8.1.8-py3-none-any.whl (98 kB)
+Container build	Install dependencies	2026-10-27T20:05:15.0263006Z Downloading importlib_metadata-8.7.1-py3-none-any.whl (27 kB)
+Container build	Install dependencies	2026-10-27T20:05:15.0484561Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Container build	Install dependencies	2026-10-27T20:05:15.2684804Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Container build	Install dependencies	2026-10-27T20:05:15.5315513Z Downloading markupsafe-3.0.4-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+Container build	Install dependencies	2026-10-27T20:05:15.6410799Z Downloading zipp-3.23.1-py3-none-any.whl (10 kB)
+Container build	Install dependencies	2026-10-27T20:05:15.8151918Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Container build	Install dependencies	2026-10-27T20:05:15.8598467Z Installing collected packages: nose, zipp, Six, pyflakes, pycodestyle, mccabe, MarkupSafe, itsdangerous, gunicorn, click, Werkzeug, Jinja2, importlib-metadata, flake8, Flask, Flask-Cors
+Container build	Install dependencies	2026-10-27T20:05:16.5279572Z 
+Container build	Install dependencies	2026-10-27T20:05:16.5328490Z Successfully installed Flask-2.2.5 Flask-Cors-3.0.10 Jinja2-3.1.6 MarkupSafe-3.0.4 Six-1.17.0 Werkzeug-2.2.3 click-8.1.8 flake8-6.0.0 gunicorn-20.1.0 importlib-metadata-8.7.1 itsdangerous-2.2.0 mccabe-0.7.0 nose-1.3.7 pycodestyle-2.10.0 pyflakes-3.0.1 zipp-3.23.1
+Container build	Install dependencies	2026-10-27T20:05:16.5355413Z WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Container build	Lint with flake8	﻿2026-10-27T20:05:16.7159025Z ##[group]Run flake8 app.py tests --count --statistics
+Container build	Lint with flake8	2026-10-27T20:05:16.7159477Z ^[[36;1mflake8 app.py tests --count --statistics^[[0m
+Container build	Lint with flake8	2026-10-27T20:05:16.7159908Z shell: sh -e {0}
+Container build	Lint with flake8	2026-10-27T20:05:16.7160109Z ##[endgroup]
+Container build	Lint with flake8	2026-10-27T20:05:16.9971482Z 0
+Container build	Run unit tests with nose	﻿2026-10-27T20:05:17.0213675Z ##[group]Run nosetests -v tests
+Container build	Run unit tests with nose	2026-10-27T20:05:17.0214208Z ^[[36;1mnosetests -v tests^[[0m
+Container build	Run unit tests with nose	2026-10-27T20:05:17.0214722Z shell: sh -e {0}
+Container build	Run unit tests with nose	2026-10-27T20:05:17.0215064Z ##[endgroup]
+Container build	Run unit tests with nose	2026-10-27T20:05:17.4349374Z test_counter_can_be_incremented_and_reset (tests.test_app.CounterServiceTest) ... ok
+Container build	Run unit tests with nose	2026-10-27T20:05:17.4358531Z test_health_returns_ok (tests.test_app.CounterServiceTest) ... ok
+Container build	Run unit tests with nose	2026-10-27T20:05:17.4367743Z test_index_returns_service_metadata (tests.test_app.CounterServiceTest) ... ok
+Container build	Run unit tests with nose	2026-10-27T20:05:17.4370166Z 
+Container build	Run unit tests with nose	2026-10-27T20:05:17.4370690Z ----------------------------------------------------------------------
+Container build	Run unit tests with nose	2026-10-27T20:05:17.4371587Z Ran 3 tests in 0.009s
+Container build	Run unit tests with nose	2026-10-27T20:05:17.4371968Z 
+Container build	Run unit tests with nose	2026-10-27T20:05:17.4372213Z OK
+Container build	Post Setup Node.js	﻿2026-10-27T20:05:17.4835892Z Post job cleanup.
+Container build	Post Setup Node.js	2026-10-27T20:05:17.4842234Z ##[command]/usr/bin/docker exec  cc871f11c4f43ae8e4b8a0bf7d4ce5799d8927f67545b4125b8e79f958e05c28 sh -c "cat /etc/*release | grep ^ID"
+Container build	Post Setup Node.js	2026-10-27T20:05:17.7329596Z (node:219) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Container build	Post Setup Node.js	2026-10-27T20:05:17.7330989Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Container build	Post Checkout repository	﻿2026-10-27T20:05:17.7691301Z Post job cleanup.
+Container build	Post Checkout repository	2026-10-27T20:05:17.7702461Z ##[command]/usr/bin/docker exec  cc871f11c4f43ae8e4b8a0bf7d4ce5799d8927f67545b4125b8e79f958e05c28 sh -c "cat /etc/*release | grep ^ID"
+Container build	Post Checkout repository	2026-10-27T20:05:17.9753819Z [command]/usr/bin/git version
+Container build	Post Checkout repository	2026-10-27T20:05:17.9837263Z git version 2.47.3
+Container build	Post Checkout repository	2026-10-27T20:05:17.9897101Z Temporarily overriding HOME='/__w/_temp/1e71f9c6-989a-4257-9f5e-31669c914bd5' before making global git config changes
+Container build	Post Checkout repository	2026-10-27T20:05:17.9905961Z Adding repository directory to the temporary git global config as a safe directory
+Container build	Post Checkout repository	2026-10-27T20:05:17.9922973Z [command]/usr/bin/git config --global --add safe.directory /__w/ci-cd-final-project/ci-cd-final-project
+Container build	Post Checkout repository	2026-10-27T20:05:17.9999050Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Container build	Post Checkout repository	2026-10-27T20:05:18.0103894Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Container build	Post Checkout repository	2026-10-27T20:05:18.0630493Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Container build	Post Checkout repository	2026-10-27T20:05:18.0691683Z http.https://github.com/.extraheader
+Container build	Post Checkout repository	2026-10-27T20:05:18.0697007Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Container build	Post Checkout repository	2026-10-27T20:05:18.0770104Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Container build	Post Checkout repository	2026-10-27T20:05:18.1154353Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Container build	Post Checkout repository	2026-10-27T20:05:18.1209954Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Container build	Stop containers	﻿2026-10-27T20:05:18.1766908Z Stop and remove container: 165bcf2caa074b36b6afd6f4bba6fe38_python39_b73a8d
+Container build	Stop containers	2026-10-27T20:05:18.1771507Z ##[command]/usr/bin/docker rm --force cc871f11c4f43ae8e4b8a0bf7d4ce5799d8927f67545b4125b8e79f958e05c28
+Container build	Stop containers	2026-10-27T20:05:18.8277462Z cc871f11c4f43ae8e4b8a0bf7d4ce5799d8927f67545b4125b8e79f958e05c28
+Container build	Stop containers	2026-10-27T20:05:18.8311556Z Remove container network: github_network_0542914cb0304d88a9851174047b9cb0
+Container build	Stop containers	2026-10-27T20:05:18.8316417Z ##[command]/usr/bin/docker network rm github_network_0542914cb0304d88a9851174047b9cb0
+Container build	Stop containers	2026-10-27T20:05:18.9486746Z github_network_0542914cb0304d88a9851174047b9cb0
+Container build	Complete job	﻿2026-10-27T20:05:18.9564972Z Cleaning up orphan processes
+Container build	Complete job	2026-10-27T20:05:19.0017637Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Lint and test	Set up job	﻿2026-10-27T20:04:42.1973739Z Current runner version: '2.338.0'
+Lint and test	Set up job	2026-10-27T20:04:42.1999129Z ##[group]Runner Image Provisioner
+Lint and test	Set up job	2026-10-27T20:04:42.2000054Z Hosted Compute Agent
+Lint and test	Set up job	2026-10-27T20:04:42.2000682Z Version: 20261021.618
+Lint and test	Set up job	2026-10-27T20:04:42.2001306Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+Lint and test	Set up job	2026-10-27T20:04:42.2002216Z Build Date: 2026-10-21T00:45:21Z
+Lint and test	Set up job	2026-10-27T20:04:42.2002962Z Worker ID: {4a37ad2b-7e53-4b28-8b6d-08bb2b942437}
+Lint and test	Set up job	2026-10-27T20:04:42.2003702Z Region: westcentralus
+Lint and test	Set up job	2026-10-27T20:04:42.2004287Z Cloud: Azure
+Lint and test	Set up job	2026-10-27T20:04:42.2004827Z ##[endgroup]
+Lint and test	Set up job	2026-10-27T20:04:42.2006393Z ##[group]Operating System
+Lint and test	Set up job	2026-10-27T20:04:42.2007053Z Ubuntu
+Lint and test	Set up job	2026-10-27T20:04:42.2007580Z 22.04.5
+Lint and test	Set up job	2026-10-27T20:04:42.2008065Z LTS
+Lint and test	Set up job	2026-10-27T20:04:42.2008617Z ##[endgroup]
+Lint and test	Set up job	2026-10-27T20:04:42.2009208Z ##[group]Runner Image
+Lint and test	Set up job	2026-10-27T20:04:42.2009846Z Image: ubuntu-22.04
+Lint and test	Set up job	2026-10-27T20:04:42.2010411Z Version: 20261012.322.1
+Lint and test	Set up job	2026-10-27T20:04:42.2011443Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20261012.322/images/ubuntu/Ubuntu2204-Readme.md
+Lint and test	Set up job	2026-10-27T20:04:42.2013300Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20261012.322
+Lint and test	Set up job	2026-10-27T20:04:42.2014315Z ##[endgroup]
+Lint and test	Set up job	2026-10-27T20:04:42.2015361Z ##[group]GITHUB_TOKEN Permissions
+Lint and test	Set up job	2026-10-27T20:04:42.2017955Z Contents: read
+Lint and test	Set up job	2026-10-27T20:04:42.2018546Z Metadata: read
+Lint and test	Set up job	2026-10-27T20:04:42.2019080Z ##[endgroup]
+Lint and test	Set up job	2026-10-27T20:04:42.2021158Z Secret source: Actions
+Lint and test	Set up job	2026-10-27T20:04:42.2022251Z Cache mode: write
+Lint and test	Set up job	2026-10-27T20:04:42.2023020Z Prepare workflow directory
+Lint and test	Set up job	2026-10-27T20:04:42.2406579Z Prepare all required actions
+Lint and test	Set up job	2026-10-27T20:04:42.2456056Z Getting action download info
+Lint and test	Set up job	2026-10-27T20:04:42.5895524Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Lint and test	Set up job	2026-10-27T20:04:42.6827883Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+Lint and test	Set up job	2026-10-27T20:04:42.8859155Z Complete job name: Lint and test
+Lint and test	Checkout repository	﻿2026-10-27T20:04:42.9635862Z ##[group]Run actions/checkout@v4
+Lint and test	Checkout repository	2026-10-27T20:04:42.9636835Z with:
+Lint and test	Checkout repository	2026-10-27T20:04:42.9637451Z   repository: PrathmeshVishwakarma/ci-cd-final-project
+Lint and test	Checkout repository	2026-10-27T20:04:42.9641723Z   token: ***
+Lint and test	Checkout repository	2026-10-27T20:04:42.9642445Z   ssh-strict: true
+Lint and test	Checkout repository	2026-10-27T20:04:42.9642997Z   ssh-user: git
+Lint and test	Checkout repository	2026-10-27T20:04:42.9643573Z   persist-credentials: true
+Lint and test	Checkout repository	2026-10-27T20:04:42.9644131Z   clean: true
+Lint and test	Checkout repository	2026-10-27T20:04:42.9644651Z   sparse-checkout-cone-mode: true
+Lint and test	Checkout repository	2026-10-27T20:04:42.9645262Z   fetch-depth: 1
+Lint and test	Checkout repository	2026-10-27T20:04:42.9645768Z   fetch-tags: false
+Lint and test	Checkout repository	2026-10-27T20:04:42.9646309Z   show-progress: true
+Lint and test	Checkout repository	2026-10-27T20:04:42.9646873Z   lfs: false
+Lint and test	Checkout repository	2026-10-27T20:04:42.9647339Z   submodules: false
+Lint and test	Checkout repository	2026-10-27T20:04:42.9647905Z   set-safe-directory: true
+Lint and test	Checkout repository	2026-10-27T20:04:42.9648525Z   allow-unsafe-pr-checkout: false
+Lint and test	Checkout repository	2026-10-27T20:04:42.9649316Z ##[endgroup]
+Lint and test	Checkout repository	2026-10-27T20:04:43.1966482Z Syncing repository: PrathmeshVishwakarma/ci-cd-final-project
+Lint and test	Checkout repository	2026-10-27T20:04:43.1968970Z ##[group]Getting Git version info
+Lint and test	Checkout repository	2026-10-27T20:04:43.1969985Z Working directory is '/home/runner/work/ci-cd-final-project/ci-cd-final-project'
+Lint and test	Checkout repository	2026-10-27T20:04:43.1971281Z [command]/usr/bin/git version
+Lint and test	Checkout repository	2026-10-27T20:04:43.2040591Z git version 2.55.0
+Lint and test	Checkout repository	2026-10-27T20:04:43.2061192Z ##[endgroup]
+Lint and test	Checkout repository	2026-10-27T20:04:43.2084135Z Temporarily overriding HOME='/home/runner/work/_temp/d55b3619-b0db-4373-a8c8-88b99c125505' before making global git config changes
+Lint and test	Checkout repository	2026-10-27T20:04:43.2087039Z Adding repository directory to the temporary git global config as a safe directory
+Lint and test	Checkout repository	2026-10-27T20:04:43.2089399Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ci-cd-final-project/ci-cd-final-project
+Lint and test	Checkout repository	2026-10-27T20:04:43.2122559Z Deleting the contents of '/home/runner/work/ci-cd-final-project/ci-cd-final-project'
+Lint and test	Checkout repository	2026-10-27T20:04:43.2127597Z ##[group]Initializing the repository
+Lint and test	Checkout repository	2026-10-27T20:04:43.2131144Z [command]/usr/bin/git init /home/runner/work/ci-cd-final-project/ci-cd-final-project
+Lint and test	Checkout repository	2026-10-27T20:04:43.2236727Z hint: Using 'master' as the name for the initial branch. This default branch name
+Lint and test	Checkout repository	2026-10-27T20:04:43.2239115Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Lint and test	Checkout repository	2026-10-27T20:04:43.2240732Z hint: to use in all of your new repositories, which will suppress this warning,
+Lint and test	Checkout repository	2026-10-27T20:04:43.2242259Z hint: call:
+Lint and test	Checkout repository	2026-10-27T20:04:43.2243244Z hint:
+Lint and test	Checkout repository	2026-10-27T20:04:43.2244241Z hint: 	git config --global init.defaultBranch <name>
+Lint and test	Checkout repository	2026-10-27T20:04:43.2245369Z hint:
+Lint and test	Checkout repository	2026-10-27T20:04:43.2246424Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Lint and test	Checkout repository	2026-10-27T20:04:43.2247990Z hint: 'development'. The just-created branch can be renamed via this command:
+Lint and test	Checkout repository	2026-10-27T20:04:43.2249354Z hint:
+Lint and test	Checkout repository	2026-10-27T20:04:43.2250280Z hint: 	git branch -m <name>
+Lint and test	Checkout repository	2026-10-27T20:04:43.2251311Z hint:
+Lint and test	Checkout repository	2026-10-27T20:04:43.2252569Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Lint and test	Checkout repository	2026-10-27T20:04:43.2254553Z Initialized empty Git repository in /home/runner/work/ci-cd-final-project/ci-cd-final-project/.git/
+Lint and test	Checkout repository	2026-10-27T20:04:43.2264967Z [command]/usr/bin/git remote add origin https://github.com/PrathmeshVishwakarma/ci-cd-final-project
+Lint and test	Checkout repository	2026-10-27T20:04:43.2306601Z ##[endgroup]
+Lint and test	Checkout repository	2026-10-27T20:04:43.2308174Z ##[group]Disabling automatic garbage collection
+Lint and test	Checkout repository	2026-10-27T20:04:43.2310481Z [command]/usr/bin/git config --local gc.auto 0
+Lint and test	Checkout repository	2026-10-27T20:04:43.2351420Z ##[endgroup]
+Lint and test	Checkout repository	2026-10-27T20:04:43.2352920Z ##[group]Setting up auth
+Lint and test	Checkout repository	2026-10-27T20:04:43.2353980Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Lint and test	Checkout repository	2026-10-27T20:04:43.2393138Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Lint and test	Checkout repository	2026-10-27T20:04:43.2720457Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Lint and test	Checkout repository	2026-10-27T20:04:43.2750676Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Lint and test	Checkout repository	2026-10-27T20:04:43.3045343Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Lint and test	Checkout repository	2026-10-27T20:04:43.3081265Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Lint and test	Checkout repository	2026-10-27T20:04:43.3292473Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Lint and test	Checkout repository	2026-10-27T20:04:43.3334443Z ##[endgroup]
+Lint and test	Checkout repository	2026-10-27T20:04:43.3335612Z ##[group]Fetching the repository
+Lint and test	Checkout repository	2026-10-27T20:04:43.3343048Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ccaec237004321dc24fd06455b1c870ec6b3d4c8:refs/remotes/origin/main
+Lint and test	Checkout repository	2026-10-27T20:04:43.7796334Z From https://github.com/PrathmeshVishwakarma/ci-cd-final-project
+Lint and test	Checkout repository	2026-10-27T20:04:43.7798017Z  * [new ref]         ccaec237004321dc24fd06455b1c870ec6b3d4c8 -> origin/main
+Lint and test	Checkout repository	2026-10-27T20:04:43.7801246Z ##[endgroup]
+Lint and test	Checkout repository	2026-10-27T20:04:43.7802828Z ##[group]Determining the checkout info
+Lint and test	Checkout repository	2026-10-27T20:04:43.7804264Z ##[endgroup]
+Lint and test	Checkout repository	2026-10-27T20:04:43.7808794Z [command]/usr/bin/git sparse-checkout disable
+Lint and test	Checkout repository	2026-10-27T20:04:43.7861095Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Lint and test	Checkout repository	2026-10-27T20:04:43.7891516Z ##[group]Checking out the ref
+Lint and test	Checkout repository	2026-10-27T20:04:43.7895863Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Lint and test	Checkout repository	2026-10-27T20:04:43.7989949Z Switched to a new branch 'main'
+Lint and test	Checkout repository	2026-10-27T20:04:43.7991252Z branch 'main' set up to track 'origin/main'.
+Lint and test	Checkout repository	2026-10-27T20:04:43.7997234Z ##[endgroup]
+Lint and test	Checkout repository	2026-10-27T20:04:43.8031949Z [command]/usr/bin/git log -1 --format=%H
+Lint and test	Checkout repository	2026-10-27T20:04:43.8054743Z ccaec237004321dc24fd06455b1c870ec6b3d4c8
+Lint and test	Set up Python 3.9	﻿2026-10-27T20:04:43.8357990Z ##[group]Run actions/setup-python@v5
+Lint and test	Set up Python 3.9	2026-10-27T20:04:43.8358785Z with:
+Lint and test	Set up Python 3.9	2026-10-27T20:04:43.8359303Z   python-version: 3.9
+Lint and test	Set up Python 3.9	2026-10-27T20:04:43.8359844Z   cache: pip
+Lint and test	Set up Python 3.9	2026-10-27T20:04:43.8360363Z   check-latest: false
+Lint and test	Set up Python 3.9	2026-10-27T20:04:43.8364981Z   token: ***
+Lint and test	Set up Python 3.9	2026-10-27T20:04:43.8365577Z   update-environment: true
+Lint and test	Set up Python 3.9	2026-10-27T20:04:43.8366146Z   allow-prereleases: false
+Lint and test	Set up Python 3.9	2026-10-27T20:04:43.8366721Z   freethreaded: false
+Lint and test	Set up Python 3.9	2026-10-27T20:04:43.8367271Z ##[endgroup]
+Lint and test	Set up Python 3.9	2026-10-27T20:04:43.9737148Z ##[group]Installed versions
+Lint and test	Set up Python 3.9	2026-10-27T20:04:43.9822416Z Version 3.9 was not found in the local cache
+Lint and test	Set up Python 3.9	2026-10-27T20:04:44.0013669Z (node:2096) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Lint and test	Set up Python 3.9	2026-10-27T20:04:44.0016104Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Lint and test	Set up Python 3.9	2026-10-27T20:04:44.9725064Z Version 3.9 is available for downloading
+Lint and test	Set up Python 3.9	2026-10-27T20:04:44.9726065Z Download from "https://github.com/actions/python-versions/releases/download/3.9.25-19039189640/python-3.9.25-linux-22.04-x64.tar.gz"
+Lint and test	Set up Python 3.9	2026-10-27T20:04:45.8276167Z Extract downloaded archive
+Lint and test	Set up Python 3.9	2026-10-27T20:04:45.8397279Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/f0b58f80-61d9-4282-9451-f0a767a32ba9 -f /home/runner/work/_temp/4f393dde-1e5e-44ca-becf-ba3a67cc0e47
+Lint and test	Set up Python 3.9	2026-10-27T20:04:47.3659223Z Execute installation script
+Lint and test	Set up Python 3.9	2026-10-27T20:04:47.3750202Z Check if Python hostedtoolcache folder exist...
+Lint and test	Set up Python 3.9	2026-10-27T20:04:47.3756847Z Create Python 3.9.25 folder
+Lint and test	Set up Python 3.9	2026-10-27T20:04:47.3765622Z Copy Python binaries to hostedtoolcache folder
+Lint and test	Set up Python 3.9	2026-10-27T20:04:47.6479413Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+Lint and test	Set up Python 3.9	2026-10-27T20:04:47.6517535Z Upgrading pip...
+Lint and test	Set up Python 3.9	2026-10-27T20:04:49.7050760Z Looking in links: /tmp/tmphl4pwfj2
+Lint and test	Set up Python 3.9	2026-10-27T20:04:49.7055219Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (79.0.1)
+Lint and test	Set up Python 3.9	2026-10-27T20:04:49.7059167Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (23.0.1)
+Lint and test	Set up Python 3.9	2026-10-27T20:04:51.2101369Z Collecting pip
+Lint and test	Set up Python 3.9	2026-10-27T20:04:51.3240689Z Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
+Lint and test	Set up Python 3.9	2026-10-27T20:04:51.4293754Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 18.0 MB/s eta 0:00:00
+Lint and test	Set up Python 3.9	2026-10-27T20:04:51.4294593Z 
+Lint and test	Set up Python 3.9	2026-10-27T20:04:51.4818483Z Installing collected packages: pip
+Lint and test	Set up Python 3.9	2026-10-27T20:04:51.4819472Z Attempting uninstall: pip
+Lint and test	Set up Python 3.9	2026-10-27T20:04:51.4824837Z Found existing installation: pip 23.0.1
+Lint and test	Set up Python 3.9	2026-10-27T20:04:51.6000116Z Uninstalling pip-23.0.1:
+Lint and test	Set up Python 3.9	2026-10-27T20:04:51.6056417Z Successfully uninstalled pip-23.0.1
+Lint and test	Set up Python 3.9	2026-10-27T20:04:52.3662252Z Successfully installed pip-26.0.1
+Lint and test	Set up Python 3.9	2026-10-27T20:04:52.4325130Z Create complete file
+Lint and test	Set up Python 3.9	2026-10-27T20:04:52.4365072Z Successfully set up CPython (3.9.25)
+Lint and test	Set up Python 3.9	2026-10-27T20:04:52.4366840Z ##[endgroup]
+Lint and test	Set up Python 3.9	2026-10-27T20:04:52.4897552Z [command]/opt/hostedtoolcache/Python/3.9.25/x64/bin/pip cache dir
+Lint and test	Set up Python 3.9	2026-10-27T20:04:52.6438455Z /home/runner/.cache/pip
+Lint and test	Set up Python 3.9	2026-10-27T20:04:52.8642306Z Cache hit for: setup-python-Linux-x64-22.04-Ubuntu-python-3.9.25-pip-dd868feff71aefd518771d7701f6866b300523c93606792d3ac48991462021a4
+Lint and test	Set up Python 3.9	2026-10-27T20:04:52.8768630Z (node:2096) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Lint and test	Set up Python 3.9	2026-10-27T20:04:53.6168501Z Received 3179307 of 3179307 (100.0%), 5.8 MBs/sec
+Lint and test	Set up Python 3.9	2026-10-27T20:04:53.6169739Z Cache Size: ~3 MB (3179307 B)
+Lint and test	Set up Python 3.9	2026-10-27T20:04:53.6198748Z [command]/usr/bin/tar -xf /home/runner/work/_temp/a160efbf-29f4-481b-b842-e1f2d5374f6a/cache.tzst -P -C /home/runner/work/ci-cd-final-project/ci-cd-final-project --use-compress-program unzstd
+Lint and test	Set up Python 3.9	2026-10-27T20:04:53.6381331Z Cache restored successfully
+Lint and test	Set up Python 3.9	2026-10-27T20:04:53.6392533Z Cache restored from key: setup-python-Linux-x64-22.04-Ubuntu-python-3.9.25-pip-dd868feff71aefd518771d7701f6866b300523c93606792d3ac48991462021a4
+Lint and test	Install dependencies	﻿2026-10-27T20:04:53.6555441Z ##[group]Run python -m pip install --upgrade pip
+Lint and test	Install dependencies	2026-10-27T20:04:53.6556423Z ^[[36;1mpython -m pip install --upgrade pip^[[0m
+Lint and test	Install dependencies	2026-10-27T20:04:53.6556954Z ^[[36;1mpip install -r requirements.txt^[[0m
+Lint and test	Install dependencies	2026-10-27T20:04:53.6827018Z shell: /usr/bin/bash -e {0}
+Lint and test	Install dependencies	2026-10-27T20:04:53.6827470Z env:
+Lint and test	Install dependencies	2026-10-27T20:04:53.6828103Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+Lint and test	Install dependencies	2026-10-27T20:04:53.6828656Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+Lint and test	Install dependencies	2026-10-27T20:04:53.6829197Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+Lint and test	Install dependencies	2026-10-27T20:04:53.6829688Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+Lint and test	Install dependencies	2026-10-27T20:04:53.6830175Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+Lint and test	Install dependencies	2026-10-27T20:04:53.6830684Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+Lint and test	Install dependencies	2026-10-27T20:04:53.6831103Z ##[endgroup]
+Lint and test	Install dependencies	2026-10-27T20:04:54.0115950Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (26.0.1)
+Lint and test	Install dependencies	2026-10-27T20:04:54.6390398Z Collecting Flask==2.2.5 (from -r requirements.txt (line 1))
+Lint and test	Install dependencies	2026-10-27T20:04:54.6410204Z   Using cached Flask-2.2.5-py3-none-any.whl.metadata (3.9 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:54.6763858Z Collecting Werkzeug==2.2.3 (from -r requirements.txt (line 2))
+Lint and test	Install dependencies	2026-10-27T20:04:54.6782048Z   Using cached Werkzeug-2.2.3-py3-none-any.whl.metadata (4.4 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:54.7087506Z Collecting Flask-Cors==3.0.10 (from -r requirements.txt (line 3))
+Lint and test	Install dependencies	2026-10-27T20:04:54.7106696Z   Using cached Flask_Cors-3.0.10-py2.py3-none-any.whl.metadata (5.4 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:54.7419165Z Collecting gunicorn==20.1.0 (from -r requirements.txt (line 4))
+Lint and test	Install dependencies	2026-10-27T20:04:54.7437208Z   Using cached gunicorn-20.1.0-py3-none-any.whl.metadata (3.8 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:54.7708039Z Collecting nose==1.3.7 (from -r requirements.txt (line 5))
+Lint and test	Install dependencies	2026-10-27T20:04:54.7726399Z   Using cached nose-1.3.7-py3-none-any.whl.metadata (1.7 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:54.8182375Z Collecting flake8==6.0.0 (from -r requirements.txt (line 6))
+Lint and test	Install dependencies	2026-10-27T20:04:54.8208785Z   Using cached flake8-6.0.0-py2.py3-none-any.whl.metadata (3.8 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:54.8526904Z Collecting Jinja2>=3.0 (from Flask==2.2.5->-r requirements.txt (line 1))
+Lint and test	Install dependencies	2026-10-27T20:04:54.8544591Z   Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:54.8842951Z Collecting itsdangerous>=2.0 (from Flask==2.2.5->-r requirements.txt (line 1))
+Lint and test	Install dependencies	2026-10-27T20:04:54.8859665Z   Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:54.9170442Z Collecting click>=8.0 (from Flask==2.2.5->-r requirements.txt (line 1))
+Lint and test	Install dependencies	2026-10-27T20:04:54.9188124Z   Using cached click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:54.9614946Z Collecting importlib-metadata>=3.6.0 (from Flask==2.2.5->-r requirements.txt (line 1))
+Lint and test	Install dependencies	2026-10-27T20:04:54.9632871Z   Using cached importlib_metadata-8.7.1-py3-none-any.whl.metadata (4.7 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.0378852Z Collecting MarkupSafe>=2.1.1 (from Werkzeug==2.2.3->-r requirements.txt (line 2))
+Lint and test	Install dependencies	2026-10-27T20:04:55.0397064Z   Using cached markupsafe-3.0.4-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.0687350Z Collecting Six (from Flask-Cors==3.0.10->-r requirements.txt (line 3))
+Lint and test	Install dependencies	2026-10-27T20:04:55.0705430Z   Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.0720979Z Requirement already satisfied: setuptools>=3.0 in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (from gunicorn==20.1.0->-r requirements.txt (line 4)) (79.0.1)
+Lint and test	Install dependencies	2026-10-27T20:04:55.0970295Z Collecting mccabe<0.8.0,>=0.7.0 (from flake8==6.0.0->-r requirements.txt (line 6))
+Lint and test	Install dependencies	2026-10-27T20:04:55.0987684Z   Using cached mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.1259085Z Collecting pycodestyle<2.11.0,>=2.10.0 (from flake8==6.0.0->-r requirements.txt (line 6))
+Lint and test	Install dependencies	2026-10-27T20:04:55.1276392Z   Using cached pycodestyle-2.10.0-py2.py3-none-any.whl.metadata (31 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.1592408Z Collecting pyflakes<3.1.0,>=3.0.0 (from flake8==6.0.0->-r requirements.txt (line 6))
+Lint and test	Install dependencies	2026-10-27T20:04:55.1611096Z   Using cached pyflakes-3.0.1-py2.py3-none-any.whl.metadata (3.8 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.1941413Z Collecting zipp>=3.20 (from importlib-metadata>=3.6.0->Flask==2.2.5->-r requirements.txt (line 1))
+Lint and test	Install dependencies	2026-10-27T20:04:55.1960084Z   Using cached zipp-3.23.1-py3-none-any.whl.metadata (3.6 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.2120965Z Using cached Flask-2.2.5-py3-none-any.whl (101 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.2137159Z Using cached Werkzeug-2.2.3-py3-none-any.whl (233 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.2154890Z Using cached Flask_Cors-3.0.10-py2.py3-none-any.whl (14 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.2170374Z Using cached gunicorn-20.1.0-py3-none-any.whl (79 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.2186095Z Using cached nose-1.3.7-py3-none-any.whl (154 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.2203212Z Using cached flake8-6.0.0-py2.py3-none-any.whl (57 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.2218571Z Using cached mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.2234276Z Using cached pycodestyle-2.10.0-py2.py3-none-any.whl (41 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.2249665Z Using cached pyflakes-3.0.1-py2.py3-none-any.whl (62 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.2265261Z Using cached click-8.1.8-py3-none-any.whl (98 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.2281217Z Using cached importlib_metadata-8.7.1-py3-none-any.whl (27 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.2297071Z Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.2312586Z Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.2329676Z Using cached markupsafe-3.0.4-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.2344416Z Using cached zipp-3.23.1-py3-none-any.whl (10 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.2361670Z Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Lint and test	Install dependencies	2026-10-27T20:04:55.2675759Z Installing collected packages: nose, zipp, Six, pyflakes, pycodestyle, mccabe, MarkupSafe, itsdangerous, gunicorn, click, Werkzeug, Jinja2, importlib-metadata, flake8, Flask, Flask-Cors
+Lint and test	Install dependencies	2026-10-27T20:04:55.7996420Z 
+Lint and test	Install dependencies	2026-10-27T20:04:55.8022872Z Successfully installed Flask-2.2.5 Flask-Cors-3.0.10 Jinja2-3.1.6 MarkupSafe-3.0.4 Six-1.17.0 Werkzeug-2.2.3 click-8.1.8 flake8-6.0.0 gunicorn-20.1.0 importlib-metadata-8.7.1 itsdangerous-2.2.0 mccabe-0.7.0 nose-1.3.7 pycodestyle-2.10.0 pyflakes-3.0.1 zipp-3.23.1
+Lint and test	Lint with flake8	﻿2026-10-27T20:04:55.8697525Z ##[group]Run flake8 app.py tests --count --statistics
+Lint and test	Lint with flake8	2026-10-27T20:04:55.8698128Z ^[[36;1mflake8 app.py tests --count --statistics^[[0m
+Lint and test	Lint with flake8	2026-10-27T20:04:55.8744511Z shell: /usr/bin/bash -e {0}
+Lint and test	Lint with flake8	2026-10-27T20:04:55.8744930Z env:
+Lint and test	Lint with flake8	2026-10-27T20:04:55.8745294Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+Lint and test	Lint with flake8	2026-10-27T20:04:55.8745924Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+Lint and test	Lint with flake8	2026-10-27T20:04:55.8746447Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+Lint and test	Lint with flake8	2026-10-27T20:04:55.8746940Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+Lint and test	Lint with flake8	2026-10-27T20:04:55.8747456Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+Lint and test	Lint with flake8	2026-10-27T20:04:55.8748403Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+Lint and test	Lint with flake8	2026-10-27T20:04:55.8748870Z ##[endgroup]
+Lint and test	Lint with flake8	2026-10-27T20:04:56.0629814Z 0
+Lint and test	Run unit tests with nose	﻿2026-10-27T20:04:56.0862340Z ##[group]Run nosetests -v tests
+Lint and test	Run unit tests with nose	2026-10-27T20:04:56.0862944Z ^[[36;1mnosetests -v tests^[[0m
+Lint and test	Run unit tests with nose	2026-10-27T20:04:56.0907277Z shell: /usr/bin/bash -e {0}
+Lint and test	Run unit tests with nose	2026-10-27T20:04:56.0907793Z env:
+Lint and test	Run unit tests with nose	2026-10-27T20:04:56.0908180Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+Lint and test	Run unit tests with nose	2026-10-27T20:04:56.0908807Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+Lint and test	Run unit tests with nose	2026-10-27T20:04:56.0909323Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+Lint and test	Run unit tests with nose	2026-10-27T20:04:56.0909806Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+Lint and test	Run unit tests with nose	2026-10-27T20:04:56.0910323Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+Lint and test	Run unit tests with nose	2026-10-27T20:04:56.0910849Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+Lint and test	Run unit tests with nose	2026-10-27T20:04:56.0911284Z ##[endgroup]
+Lint and test	Run unit tests with nose	2026-10-27T20:04:56.3915836Z test_counter_can_be_incremented_and_reset (tests.test_app.CounterServiceTest) ... ok
+Lint and test	Run unit tests with nose	2026-10-27T20:04:56.3922913Z test_health_returns_ok (tests.test_app.CounterServiceTest) ... ok
+Lint and test	Run unit tests with nose	2026-10-27T20:04:56.3929629Z test_index_returns_service_metadata (tests.test_app.CounterServiceTest) ... ok
+Lint and test	Run unit tests with nose	2026-10-27T20:04:56.3930865Z 
+Lint and test	Run unit tests with nose	2026-10-27T20:04:56.3931121Z ----------------------------------------------------------------------
+Lint and test	Run unit tests with nose	2026-10-27T20:04:56.3931733Z Ran 3 tests in 0.008s
+Lint and test	Run unit tests with nose	2026-10-27T20:04:56.3932273Z 
+Lint and test	Run unit tests with nose	2026-10-27T20:04:56.3932445Z OK
+Lint and test	Build Docker image	﻿2026-10-27T20:04:56.4328450Z ##[group]Run docker build -t cicd-app:ccaec237004321dc24fd06455b1c870ec6b3d4c8 .
+Lint and test	Build Docker image	2026-10-27T20:04:56.4329188Z ^[[36;1mdocker build -t cicd-app:ccaec237004321dc24fd06455b1c870ec6b3d4c8 .^[[0m
+Lint and test	Build Docker image	2026-10-27T20:04:56.4371978Z shell: /usr/bin/bash -e {0}
+Lint and test	Build Docker image	2026-10-27T20:04:56.4372485Z env:
+Lint and test	Build Docker image	2026-10-27T20:04:56.4373294Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+Lint and test	Build Docker image	2026-10-27T20:04:56.4373934Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+Lint and test	Build Docker image	2026-10-27T20:04:56.4374476Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+Lint and test	Build Docker image	2026-10-27T20:04:56.4374974Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+Lint and test	Build Docker image	2026-10-27T20:04:56.4375494Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+Lint and test	Build Docker image	2026-10-27T20:04:56.4375993Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+Lint and test	Build Docker image	2026-10-27T20:04:56.4376425Z ##[endgroup]
+Lint and test	Build Docker image	2026-10-27T20:04:59.6862882Z #0 building with "default" instance using docker driver
+Lint and test	Build Docker image	2026-10-27T20:04:59.6863323Z 
+Lint and test	Build Docker image	2026-10-27T20:04:59.6863507Z #1 [internal] load build definition from Dockerfile
+Lint and test	Build Docker image	2026-10-27T20:04:59.6864138Z #1 transferring dockerfile: 349B done
+Lint and test	Build Docker image	2026-10-27T20:04:59.6864553Z #1 DONE 0.0s
+Lint and test	Build Docker image	2026-10-27T20:04:59.6864709Z 
+Lint and test	Build Docker image	2026-10-27T20:04:59.6864970Z #2 [internal] load metadata for docker.io/library/python:3.9-slim
+Lint and test	Build Docker image	2026-10-27T20:04:59.8868454Z #2 ...
+Lint and test	Build Docker image	2026-10-27T20:04:59.8868752Z 
+Lint and test	Build Docker image	2026-10-27T20:04:59.8869273Z #3 [auth] library/python:pull token for registry-1.docker.io
+Lint and test	Build Docker image	2026-10-27T20:04:59.8869753Z #3 DONE 0.0s
+Lint and test	Build Docker image	2026-10-27T20:05:00.0365802Z 
+Lint and test	Build Docker image	2026-10-27T20:05:00.0367095Z #2 [internal] load metadata for docker.io/library/python:3.9-slim
+Lint and test	Build Docker image	2026-10-27T20:05:00.4823287Z #2 DONE 0.9s
+Lint and test	Build Docker image	2026-10-27T20:05:00.6148942Z 
+Lint and test	Build Docker image	2026-10-27T20:05:00.6150007Z #4 [internal] load .dockerignore
+Lint and test	Build Docker image	2026-10-27T20:05:00.6150623Z #4 transferring context: 114B done
+Lint and test	Build Docker image	2026-10-27T20:05:00.6151171Z #4 DONE 0.0s
+Lint and test	Build Docker image	2026-10-27T20:05:00.6151326Z 
+Lint and test	Build Docker image	2026-10-27T20:05:00.6151510Z #5 [internal] load build context
+Lint and test	Build Docker image	2026-10-27T20:05:00.6152282Z #5 transferring context: 69.56kB done
+Lint and test	Build Docker image	2026-10-27T20:05:00.6152910Z #5 DONE 0.0s
+Lint and test	Build Docker image	2026-10-27T20:05:00.6153073Z 
+Lint and test	Build Docker image	2026-10-27T20:05:00.6153529Z #6 [1/5] FROM docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+Lint and test	Build Docker image	2026-10-27T20:05:00.6154410Z #6 resolve docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b done
+Lint and test	Build Docker image	2026-10-27T20:05:00.6155403Z #6 sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b 10.36kB / 10.36kB done
+Lint and test	Build Docker image	2026-10-27T20:05:00.6156158Z #6 sha256:dad5b29e3506c35e0fd222736f4d4ef25d21b219acdd73f7bb41d59996ca8e0d 1.74kB / 1.74kB done
+Lint and test	Build Docker image	2026-10-27T20:05:00.6156890Z #6 sha256:085da638e1b8a449514c3fda83ff50a3bffae4418b050cfacd87e5722071f497 5.40kB / 5.40kB done
+Lint and test	Build Docker image	2026-10-27T20:05:00.6157585Z #6 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 0B / 29.78MB 0.1s
+Lint and test	Build Docker image	2026-10-27T20:05:00.6158347Z #6 sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 0B / 1.29MB 0.1s
+Lint and test	Build Docker image	2026-10-27T20:05:00.6159026Z #6 sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 0B / 13.88MB 0.1s
+Lint and test	Build Docker image	2026-10-27T20:05:00.8158990Z #6 sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 1.29MB / 1.29MB 0.3s
+Lint and test	Build Docker image	2026-10-27T20:05:00.8160651Z #6 sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 13.88MB / 13.88MB 0.3s
+Lint and test	Build Docker image	2026-10-27T20:05:01.0152629Z #6 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 29.78MB / 29.78MB 0.5s
+Lint and test	Build Docker image	2026-10-27T20:05:01.0154039Z #6 sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 1.29MB / 1.29MB 0.3s done
+Lint and test	Build Docker image	2026-10-27T20:05:01.0155050Z #6 sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 13.88MB / 13.88MB 0.3s done
+Lint and test	Build Docker image	2026-10-27T20:05:01.0156161Z #6 sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 251B / 251B 0.4s done
+Lint and test	Build Docker image	2026-10-27T20:05:01.1366309Z #6 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 29.78MB / 29.78MB 0.6s done
+Lint and test	Build Docker image	2026-10-27T20:05:01.1367565Z #6 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d
+Lint and test	Build Docker image	2026-10-27T20:05:01.9070196Z #6 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 0.8s done
+Lint and test	Build Docker image	2026-10-27T20:05:02.0106640Z #6 extracting sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 0.1s done
+Lint and test	Build Docker image	2026-10-27T20:05:05.8180870Z #6 extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08
+Lint and test	Build Docker image	2026-10-27T20:05:06.5018197Z #6 extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 0.5s done
+Lint and test	Build Docker image	2026-10-27T20:05:06.6658012Z #6 extracting sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508
+Lint and test	Build Docker image	2026-10-27T20:05:06.8646798Z #6 extracting sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 done
+Lint and test	Build Docker image	2026-10-27T20:05:06.8647640Z #6 DONE 6.2s
+Lint and test	Build Docker image	2026-10-27T20:05:06.8647798Z 
+Lint and test	Build Docker image	2026-10-27T20:05:06.8647968Z #7 [2/5] WORKDIR /app
+Lint and test	Build Docker image	2026-10-27T20:05:06.8648281Z #7 DONE 0.0s
+Lint and test	Build Docker image	2026-10-27T20:05:06.8648502Z 
+Lint and test	Build Docker image	2026-10-27T20:05:06.8648638Z #8 [3/5] COPY requirements.txt .
+Lint and test	Build Docker image	2026-10-27T20:05:06.8649049Z #8 DONE 0.0s
+Lint and test	Build Docker image	2026-10-27T20:05:06.8649172Z 
+Lint and test	Build Docker image	2026-10-27T20:05:06.8649442Z #9 [4/5] RUN pip install --no-cache-dir -r requirements.txt
+Lint and test	Build Docker image	2026-10-27T20:05:08.2016770Z #9 1.488 Collecting Flask==2.2.5
+Lint and test	Build Docker image	2026-10-27T20:05:08.3156501Z #9 1.575   Downloading Flask-2.2.5-py3-none-any.whl (101 kB)
+Lint and test	Build Docker image	2026-10-27T20:05:08.4218806Z #9 1.602      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.8/101.8 kB 4.0 MB/s eta 0:00:00
+Lint and test	Build Docker image	2026-10-27T20:05:08.4219632Z #9 1.665 Collecting Werkzeug==2.2.3
+Lint and test	Build Docker image	2026-10-27T20:05:08.4220282Z #9 1.686   Downloading Werkzeug-2.2.3-py3-none-any.whl (233 kB)
+Lint and test	Build Docker image	2026-10-27T20:05:08.4221237Z #9 1.708      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 233.6/233.6 kB 11.5 MB/s eta 0:00:00
+Lint and test	Build Docker image	2026-10-27T20:05:08.5319275Z #9 1.752 Collecting Flask-Cors==3.0.10
+Lint and test	Build Docker image	2026-10-27T20:05:08.5320659Z #9 1.773   Downloading Flask_Cors-3.0.10-py2.py3-none-any.whl (14 kB)
+Lint and test	Build Docker image	2026-10-27T20:05:08.5321454Z #9 1.818 Collecting gunicorn==20.1.0
+Lint and test	Build Docker image	2026-10-27T20:05:08.6647166Z #9 1.839   Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)
+Lint and test	Build Docker image	2026-10-27T20:05:08.6648191Z #9 1.841      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 323.3 MB/s eta 0:00:00
+Lint and test	Build Docker image	2026-10-27T20:05:08.6648873Z #9 1.872 Collecting nose==1.3.7
+Lint and test	Build Docker image	2026-10-27T20:05:08.6649296Z #9 1.892   Downloading nose-1.3.7-py3-none-any.whl (154 kB)
+Lint and test	Build Docker image	2026-10-27T20:05:08.6649905Z #9 1.895      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 154.7/154.7 kB 139.8 MB/s eta 0:00:00
+Lint and test	Build Docker image	2026-10-27T20:05:08.6650401Z #9 1.951 Collecting flake8==6.0.0
+Lint and test	Build Docker image	2026-10-27T20:05:08.8373739Z #9 1.973   Downloading flake8-6.0.0-py2.py3-none-any.whl (57 kB)
+Lint and test	Build Docker image	2026-10-27T20:05:08.8375290Z #9 1.976      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.8/57.8 kB 285.4 MB/s eta 0:00:00
+Lint and test	Build Docker image	2026-10-27T20:05:08.8376026Z #9 2.015 Collecting itsdangerous>=2.0
+Lint and test	Build Docker image	2026-10-27T20:05:08.8376863Z #9 2.035   Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Lint and test	Build Docker image	2026-10-27T20:05:08.8377629Z #9 2.124 Collecting importlib-metadata>=3.6.0
+Lint and test	Build Docker image	2026-10-27T20:05:08.9692895Z #9 2.144   Downloading importlib_metadata-8.7.1-py3-none-any.whl (27 kB)
+Lint and test	Build Docker image	2026-10-27T20:05:08.9693528Z #9 2.185 Collecting Jinja2>=3.0
+Lint and test	Build Docker image	2026-10-27T20:05:08.9694026Z #9 2.206   Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Lint and test	Build Docker image	2026-10-27T20:05:08.9694919Z #9 2.209      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 197.0 MB/s eta 0:00:00
+Lint and test	Build Docker image	2026-10-27T20:05:08.9695376Z #9 2.255 Collecting click>=8.0
+Lint and test	Build Docker image	2026-10-27T20:05:09.1453269Z #9 2.276   Downloading click-8.1.8-py3-none-any.whl (98 kB)
+Lint and test	Build Docker image	2026-10-27T20:05:09.1454833Z #9 2.278      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.2/98.2 kB 326.1 MB/s eta 0:00:00
+Lint and test	Build Docker image	2026-10-27T20:05:09.1692308Z #9 2.455 Collecting MarkupSafe>=2.1.1
+Lint and test	Build Docker image	2026-10-27T20:05:09.2940668Z #9 2.476   Downloading markupsafe-3.0.4-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+Lint and test	Build Docker image	2026-10-27T20:05:09.2942391Z #9 2.511 Collecting Six
+Lint and test	Build Docker image	2026-10-27T20:05:09.2942830Z #9 2.532   Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Lint and test	Build Docker image	2026-10-27T20:05:09.2943654Z #9 2.541 Requirement already satisfied: setuptools>=3.0 in /usr/local/lib/python3.9/site-packages (from gunicorn==20.1.0->-r requirements.txt (line 4)) (79.0.1)
+Lint and test	Build Docker image	2026-10-27T20:05:09.2944606Z #9 2.580 Collecting pycodestyle<2.11.0,>=2.10.0
+Lint and test	Build Docker image	2026-10-27T20:05:09.4114343Z #9 2.601   Downloading pycodestyle-2.10.0-py2.py3-none-any.whl (41 kB)
+Lint and test	Build Docker image	2026-10-27T20:05:09.4115421Z #9 2.605      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.3/41.3 kB 188.3 MB/s eta 0:00:00
+Lint and test	Build Docker image	2026-10-27T20:05:09.4116148Z #9 2.644 Collecting pyflakes<3.1.0,>=3.0.0
+Lint and test	Build Docker image	2026-10-27T20:05:09.4116676Z #9 2.664   Downloading pyflakes-3.0.1-py2.py3-none-any.whl (62 kB)
+Lint and test	Build Docker image	2026-10-27T20:05:09.4117469Z #9 2.667      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 kB 313.5 MB/s eta 0:00:00
+Lint and test	Build Docker image	2026-10-27T20:05:09.4118006Z #9 2.697 Collecting mccabe<0.8.0,>=0.7.0
+Lint and test	Build Docker image	2026-10-27T20:05:09.5179625Z #9 2.718   Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+Lint and test	Build Docker image	2026-10-27T20:05:09.5180407Z #9 2.783 Collecting zipp>=3.20
+Lint and test	Build Docker image	2026-10-27T20:05:09.5180900Z #9 2.804   Downloading zipp-3.23.1-py3-none-any.whl (10 kB)
+Lint and test	Build Docker image	2026-10-27T20:05:09.6611668Z #9 2.947 Installing collected packages: nose, zipp, Six, pyflakes, pycodestyle, mccabe, MarkupSafe, itsdangerous, gunicorn, click, Werkzeug, Jinja2, importlib-metadata, flake8, Flask, Flask-Cors
+Lint and test	Build Docker image	2026-10-27T20:05:10.2316192Z #9 3.518 Successfully installed Flask-2.2.5 Flask-Cors-3.0.10 Jinja2-3.1.6 MarkupSafe-3.0.4 Six-1.17.0 Werkzeug-2.2.3 click-8.1.8 flake8-6.0.0 gunicorn-20.1.0 importlib-metadata-8.7.1 itsdangerous-2.2.0 mccabe-0.7.0 nose-1.3.7 pycodestyle-2.10.0 pyflakes-3.0.1 zipp-3.23.1
+Lint and test	Build Docker image	2026-10-27T20:05:10.3666743Z #9 3.518 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+Lint and test	Build Docker image	2026-10-27T20:05:10.3668827Z #9 3.653 
+Lint and test	Build Docker image	2026-10-27T20:05:10.3669550Z #9 3.653 [notice] A new release of pip is available: 23.0.1 -> 26.0.1
+Lint and test	Build Docker image	2026-10-27T20:05:10.3670515Z #9 3.653 [notice] To update, run: pip install --upgrade pip
+Lint and test	Build Docker image	2026-10-27T20:05:10.5328689Z #9 DONE 3.8s
+Lint and test	Build Docker image	2026-10-27T20:05:10.6978271Z 
+Lint and test	Build Docker image	2026-10-27T20:05:10.6979136Z #10 [5/5] COPY . .
+Lint and test	Build Docker image	2026-10-27T20:05:10.6979635Z #10 DONE 0.0s
+Lint and test	Build Docker image	2026-10-27T20:05:10.6979876Z 
+Lint and test	Build Docker image	2026-10-27T20:05:10.6980227Z #11 exporting to image
+Lint and test	Build Docker image	2026-10-27T20:05:10.6980772Z #11 exporting layers
+Lint and test	Build Docker image	2026-10-27T20:05:11.0136372Z #11 exporting layers 0.5s done
+Lint and test	Build Docker image	2026-10-27T20:05:11.0388704Z #11 writing image sha256:e5474c707dc4052c1635e447451c84d72296a2947080956cb118d50174cb74c3 done
+Lint and test	Build Docker image	2026-10-27T20:05:11.0389954Z #11 naming to docker.io/library/cicd-app:ccaec237004321dc24fd06455b1c870ec6b3d4c8 done
+Lint and test	Build Docker image	2026-10-27T20:05:11.0390687Z #11 DONE 0.5s
+Lint and test	Post Set up Python 3.9	﻿2026-10-27T20:05:11.0554932Z Post job cleanup.
+Lint and test	Post Set up Python 3.9	2026-10-27T20:05:11.1840123Z Cache hit occurred on the primary key setup-python-Linux-x64-22.04-Ubuntu-python-3.9.25-pip-dd868feff71aefd518771d7701f6866b300523c93606792d3ac48991462021a4, not saving cache.
+Lint and test	Post Set up Python 3.9	2026-10-27T20:05:11.1841557Z (node:2374) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Lint and test	Post Set up Python 3.9	2026-10-27T20:05:11.1842664Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Lint and test	Post Checkout repository	﻿2026-10-27T20:05:11.2000068Z Post job cleanup.
+Lint and test	Post Checkout repository	2026-10-27T20:05:11.2875122Z [command]/usr/bin/git version
+Lint and test	Post Checkout repository	2026-10-27T20:05:11.2921577Z git version 2.55.0
+Lint and test	Post Checkout repository	2026-10-27T20:05:11.2965092Z Temporarily overriding HOME='/home/runner/work/_temp/6590aa45-73b2-4d61-8102-9ffe5d2905cc' before making global git config changes
+Lint and test	Post Checkout repository	2026-10-27T20:05:11.2966078Z Adding repository directory to the temporary git global config as a safe directory
+Lint and test	Post Checkout repository	2026-10-27T20:05:11.2971997Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ci-cd-final-project/ci-cd-final-project
+Lint and test	Post Checkout repository	2026-10-27T20:05:11.3013031Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Lint and test	Post Checkout repository	2026-10-27T20:05:11.3050772Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Lint and test	Post Checkout repository	2026-10-27T20:05:11.3287032Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Lint and test	Post Checkout repository	2026-10-27T20:05:11.3310039Z http.https://github.com/.extraheader
+Lint and test	Post Checkout repository	2026-10-27T20:05:11.3321302Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Lint and test	Post Checkout repository	2026-10-27T20:05:11.3356665Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Lint and test	Post Checkout repository	2026-10-27T20:05:11.3655412Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Lint and test	Post Checkout repository	2026-10-27T20:05:11.3689389Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Lint and test	Complete job	﻿2026-10-27T20:05:11.4079156Z Cleaning up orphan processes
+Lint and test	Complete job	2026-10-27T20:05:11.4544142Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
