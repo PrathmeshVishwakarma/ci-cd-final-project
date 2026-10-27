@@ -1,5 +1,9 @@
 # CI/CD Final Project: Counter Service on OpenShift
 
+[![CI](https://github.com/PrathmeshVishwakarma/ci-cd-final-project/actions/workflows/workflow.yml/badge.svg)](https://github.com/PrathmeshVishwakarma/ci-cd-final-project/actions/workflows/workflow.yml)
+
+Public repository: <https://github.com/PrathmeshVishwakarma/ci-cd-final-project>
+
 ## Project name details
 
 | Field | Value |
@@ -67,14 +71,12 @@ The service listens on port `8000`.
 `-- README.md
 ```
 
-## Publish this repository to GitHub
+## Push updates to GitHub
 
 ```bash
-git init
 git add .
-git commit -m "Add CI/CD final project pipeline"
-git branch -M main
-gh repo create ci-cd-final-project --public --source=. --remote=origin --push
+git commit -m "Describe your change"
+git push
 ```
 
 The pipeline run manifests point at
