@@ -13,7 +13,7 @@ Public repository: <https://github.com/PrathmeshVishwakarma/ci-cd-final-project>
 | Runtime | Python 3.9 / Flask 2.2 |
 | Continuous integration | GitHub Actions |
 | Continuous delivery | Tekton / OpenShift Pipelines |
-| Target platform | OpenShift, project `ci-cd-final` |
+| Target platform | OpenShift, lab project `sn-labs-prathmeshvi1` |
 | Test runner | nose |
 | Linter | flake8 |
 
@@ -28,8 +28,9 @@ runs the following steps:
 2. `git-clone` - clones the repository from GitHub.
 3. `flake8` - lints the Python code.
 4. `nose` - runs the unit tests.
-5. `buildah` - builds the container image and pushes it to the OpenShift
-   internal registry.
+5. `buildah` - builds the application image. The step keeps the assignment's
+   `buildah` name, but uses an unprivileged OpenShift source-to-image (S2I)
+   BuildConfig so it also works on lab clusters that block the privileged SCC.
 6. `deploy` - applies the OpenShift manifests and waits for the rollout.
 
 ## API
@@ -60,7 +61,7 @@ The service listens on port `8000`.
 |   |-- service.yaml                 # counter-service-green service
 |   `-- route.yaml                   # edge-terminated route
 |-- scripts/
-|   |-- bootstrap-openshift.sh       # create project, SA, PVC, tasks, pipeline
+|   |-- bootstrap-openshift.sh       # create PVC, tasks, and pipeline
 |   |-- run-pipeline.sh              # create a PipelineRun
 |   |-- capture-github-actions.sh    # writes cicd-github-validate
 |   `-- capture-app-logs.sh          # writes oc-pipeline-application-logs
@@ -128,20 +129,23 @@ The exact graded steps are named `Lint with flake8` and
 oc login --token=<token> --server=<server>
 ```
 
-### 2. Create the project, service account, PVC, tasks, and pipeline
+### 2. Create the PVC, tasks, and pipeline
 
 ```bash
 chmod +x scripts/*.sh
-./scripts/bootstrap-openshift.sh ci-cd-final
+./scripts/bootstrap-openshift.sh sn-labs-prathmeshvi1
 ```
 
 This creates:
 
-- the `pipeline` service account with `edit`, `system:image-builder`,
-  `privileged`, and `anyuid` permissions;
 - the `oc-pipelines-pvc` PVC with storage class `skills-network-learner` and
   a requested capacity of `1Gi`;
 - the custom Tekton tasks and the `oc-pipelines` pipeline.
+
+The PipelineRuns use the `default` service account because it already has
+project edit permissions in the lab. The build step uses the `builder` service
+account internally through an OpenShift BuildConfig, so it does not need the
+privileged SCC that the lab blocks.
 
 The `git-clone` task is the ClusterTask that ships with OpenShift Pipelines.
 
@@ -151,13 +155,14 @@ Either edit the repository URL in `.tekton/pipeline-run-green.yml` and apply
 it:
 
 ```bash
-oc apply -n ci-cd-final -f .tekton/pipeline-run-green.yml
+oc apply -n sn-labs-prathmeshvi1 -f .tekton/pipeline-run-green.yml
 ```
 
 or use the helper (this accepts the repository URL and run name):
 
 ```bash
-REPO_URL=https://github.com/<your-user>/ci-cd-final-project.git \
+REPO_URL=https://github.com/PrathmeshVishwakarma/ci-cd-final-project.git \
+NAMESPACE=sn-labs-prathmeshvi1 \
 RUN_NAME=oc-pipelines-oc-green \
 ./scripts/run-pipeline.sh
 ```
@@ -165,18 +170,18 @@ RUN_NAME=oc-pipelines-oc-green \
 For the `oc-pipelines-oc-final` run:
 
 ```bash
-REPO_URL=https://github.com/<your-user>/ci-cd-final-project.git \
+REPO_URL=https://github.com/PrathmeshVishwakarma/ci-cd-final-project.git \
+NAMESPACE=sn-labs-prathmeshvi1 \
 RUN_NAME=oc-pipelines-oc-final \
-COLOR=latest \
 ./scripts/run-pipeline.sh
 ```
 
 ### 4. Follow and verify the run
 
 ```bash
-oc logs -n ci-cd-final -f pipelinerun/oc-pipelines-oc-green
-oc get pipelinerun -n ci-cd-final
-oc get pods -n ci-cd-final
+oc logs -n sn-labs-prathmeshvi1 -f pipelinerun/oc-pipelines-oc-green
+oc get pipelinerun -n sn-labs-prathmeshvi1
+oc get pods -n sn-labs-prathmeshvi1
 ```
 
 The pipeline succeeds when all six tasks are green:
@@ -185,7 +190,7 @@ The pipeline succeeds when all six tasks are green:
 Verify the application:
 
 ```bash
-oc get route -n ci-cd-final
+oc get route -n sn-labs-prathmeshvi1
 curl -k https://<route-host>/health
 curl -k https://<route-host>/
 ```
@@ -223,9 +228,12 @@ SERVICERUNNING counter-service listening on port 8000
 
 ## Troubleshooting
 
-- **`buildah` cannot push the image:** confirm that the `pipeline` service
-  account has `system:image-builder` and `privileged` permissions. The buildah
-  task uses the service account token and the OpenShift internal registry.
+- **`buildah` fails with a privileged SCC error:** this lab does not allow the
+  privileged SCC for the `default` or `builder` service accounts. The `buildah`
+  task therefore creates an unprivileged OpenShift S2I BuildConfig from
+  `openshift/python:3.9-ubi8` (or the closest Python builder tag available) and
+  runs `oc start-build --from-dir`. Confirm the builder ImageStream exists with
+  `oc get imagestreamtag -n openshift | grep -i python`.
 - **`git-clone` task not found:** install or enable the OpenShift Pipelines
   `git-clone` ClusterTask, or replace the `taskRef` with the Tekton Hub
   `git-clone` task.
@@ -239,5 +247,5 @@ SERVICERUNNING counter-service listening on port 8000
 ## Cleanup
 
 ```bash
-oc delete project ci-cd-final
+oc delete project sn-labs-prathmeshvi1
 ```

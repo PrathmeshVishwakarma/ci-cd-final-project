@@ -2,7 +2,7 @@
 # Save the OpenShift application logs to oc-pipeline-application-logs.
 set -euo pipefail
 
-NAMESPACE="${1:-${NAMESPACE:-ci-cd-final}}"
+NAMESPACE="${1:-${NAMESPACE:-sn-labs-prathmeshvi1}}"
 OUTPUT="${OUTPUT:-oc-pipeline-application-logs}"
 SELECTOR="${SELECTOR:-app=counter-service,version=green}"
 

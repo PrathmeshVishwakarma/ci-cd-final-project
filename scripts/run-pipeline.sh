@@ -2,12 +2,12 @@
 # Create a PipelineRun for the oc-pipelines pipeline.
 set -euo pipefail
 
-NAMESPACE="${NAMESPACE:-ci-cd-final}"
+NAMESPACE="${NAMESPACE:-sn-labs-prathmeshvi1}"
 REPO_URL="${REPO_URL:-}"
 REVISION="${REVISION:-main}"
 RUN_NAME="${RUN_NAME:-oc-pipelines-oc-green}"
-COLOR="${COLOR:-green}"
-IMAGE="${IMAGE:-image-registry.openshift-image-registry.svc:5000/${NAMESPACE}/counter-service:${COLOR}}"
+SERVICE_ACCOUNT="${SERVICE_ACCOUNT:-default}"
+IMAGE="${IMAGE:-image-registry.openshift-image-registry.svc:5000/${NAMESPACE}/counter-service:latest}"
 
 if [ -z "${REPO_URL}" ]; then
   cat >&2 <<'EOF'
@@ -37,7 +37,7 @@ metadata:
 spec:
   pipelineRef:
     name: oc-pipelines
-  serviceAccountName: pipeline
+  serviceAccountName: ${SERVICE_ACCOUNT}
   timeouts:
     pipeline: 1h0m0s
   workspaces:

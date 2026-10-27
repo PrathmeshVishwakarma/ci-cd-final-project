@@ -7,7 +7,7 @@ metadata:
 spec:
   pipelineRef:
     name: oc-pipelines
-  serviceAccountName: pipeline
+  serviceAccountName: default
   timeouts:
     pipeline: 1h0m0s
   workspaces:
@@ -15,14 +15,13 @@ spec:
       persistentVolumeClaim:
         claimName: oc-pipelines-pvc
   params:
-    # Replace this URL with your public GitHub repository.
     - name: repo-url
       value: https://github.com/PrathmeshVishwakarma/ci-cd-final-project.git
     - name: revision
       value: main
     - name: image
-      value: image-registry.openshift-image-registry.svc:5000/ci-cd-final/counter-service:latest
+      value: image-registry.openshift-image-registry.svc:5000/sn-labs-prathmeshvi1/counter-service:latest
     - name: namespace
-      value: ci-cd-final
+      value: sn-labs-prathmeshvi1
     - name: deployment-name
       value: counter-service-green

@@ -24,6 +24,9 @@ CORS(app)
 
 counter = {"count": 0}
 
+# WSGI alias used by the Python S2I builder (APP_MODULE=app:application).
+application = app
+
 logger.info("SERVICERUNNING counter-service listening on port %d", PORT)
 
 

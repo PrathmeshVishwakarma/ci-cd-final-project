@@ -84,51 +84,92 @@ metadata:
   labels:
     app.kubernetes.io/part-of: oc-pipelines
 spec:
-  description: Build the container image with buildah and push it to the registry.
+  description: >-
+    Build the application image. The step keeps the buildah name required by the
+    assignment, but uses an OpenShift source-to-image BuildConfig so the build
+    works on lab clusters that do not allow the privileged SCC.
   workspaces:
     - name: source
       description: Workspace containing the cloned repository.
   params:
     - name: image
-      description: Fully qualified image tag to build and push.
+      description: Fully qualified output image tag.
       type: string
+    - name: namespace
+      description: OpenShift project that owns the BuildConfig.
+      type: string
+      default: sn-labs-prathmeshvi1
+    - name: app-name
+      description: BuildConfig and ImageStream name.
+      type: string
+      default: counter-service
     - name: context
       description: Build context directory.
       type: string
       default: .
-    - name: dockerfile
-      description: Dockerfile name inside the build context.
+    - name: builder-image
+      description: Optional S2I builder ImageStreamTag override.
       type: string
-      default: Dockerfile
+      default: ""
   steps:
-    - name: build-and-push
-      image: quay.io/buildah/stable:v1.43.5
+    - name: build
+      image: quay.io/openshift/origin-cli:latest
       workingDir: $(workspaces.source.path)
-      securityContext:
-        privileged: true
       script: |
         #!/usr/bin/env bash
         set -euo pipefail
 
-        export STORAGE_DRIVER=vfs
-
-        IMAGE="$(params.image)"
+        NAMESPACE="$(params.namespace)"
+        APP="$(params.app-name)"
         CONTEXT="$(params.context)"
-        DOCKERFILE="$(params.dockerfile)"
-        AUTHFILE="/tmp/registry-auth.json"
-        REGISTRY="${IMAGE%%/*}"
+        IMAGE="$(params.image)"
 
-        TOKEN="$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)"
-        AUTH="$(printf 'serviceaccount:%s' "${TOKEN}" | base64 | tr -d '\n')"
-        printf '{"auths":{"%s":{"auth":"%s"}}}\n' "${REGISTRY}" "${AUTH}" > "${AUTHFILE}"
-        export REGISTRY_AUTH_FILE="${AUTHFILE}"
+        OVERRIDE_BUILDER="$(params.builder-image)"
+        BUILDERS=(
+          "${OVERRIDE_BUILDER}"
+          "openshift/python:3.9-ubi8"
+          "openshift/python:3.9"
+          "openshift/python:3.8-ubi8"
+          "openshift/python:3.8"
+        )
 
-        echo "Building ${IMAGE} from ${CONTEXT}/${DOCKERFILE}"
-        buildah bud --format docker --tls-verify=false \
-          -f "${CONTEXT}/${DOCKERFILE}" -t "${IMAGE}" "${CONTEXT}"
+        SELECTED=""
+        for BUILDER in "${BUILDERS[@]}"; do
+          if [ -z "${BUILDER}" ]; then
+            continue
+          fi
+          BUILDER_NS="${BUILDER%%/*}"
+          BUILDER_TAG="${BUILDER#*/}"
+          if oc get imagestreamtag "${BUILDER_TAG}" -n "${BUILDER_NS}" \
+              >/dev/null 2>&1; then
+            SELECTED="${BUILDER}"
+            break
+          fi
+        done
 
-        echo "Pushing ${IMAGE}"
-        buildah push --tls-verify=false "${IMAGE}"
+        if [ -z "${SELECTED}" ]; then
+          echo "No Python S2I builder ImageStreamTag found in the openshift namespace." >&2
+          exit 1
+        fi
+
+        if ! oc get buildconfig "${APP}" -n "${NAMESPACE}" >/dev/null 2>&1; then
+          echo "Creating BuildConfig ${APP} from ${SELECTED}"
+          oc new-build --name="${APP}" \
+            --strategy=source \
+            --image-stream="${SELECTED}" \
+            --binary \
+            --to="${APP}:latest" \
+            -n "${NAMESPACE}"
+        fi
+
+        echo "Starting build ${APP} from ${CONTEXT}"
+        oc start-build "${APP}" \
+          --from-dir="${CONTEXT}" \
+          --follow \
+          -n "${NAMESPACE}"
+
+        oc get imagestreamtag "${APP}:latest" -n "${NAMESPACE}"
+        echo "Built image: ${IMAGE}"
 ---
 apiVersion: tekton.dev/v1beta1
 kind: Task
@@ -148,7 +189,7 @@ spec:
     - name: namespace
       description: OpenShift project where the application is deployed.
       type: string
-      default: ci-cd-final
+      default: sn-labs-prathmeshvi1
     - name: deployment-name
       description: Deployment to update.
       type: string
