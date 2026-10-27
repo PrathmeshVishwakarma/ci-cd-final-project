@@ -38,6 +38,9 @@ spec:
   pipelineRef:
     name: oc-pipelines
   serviceAccountName: ${SERVICE_ACCOUNT}
+  podTemplate:
+    securityContext:
+      runAsUser: 1001520000
   timeouts:
     pipeline: 1h0m0s
   workspaces:
