@@ -4,7 +4,7 @@ set -euo pipefail
 
 NAMESPACE="${1:-${NAMESPACE:-sn-labs-prathmeshvi1}}"
 OUTPUT="${OUTPUT:-oc-pipeline-application-logs}"
-SELECTOR="${SELECTOR:-app=counter-service,version=green}"
+SELECTOR="${SELECTOR:-app=cicd-app}"
 
 if ! command -v oc >/dev/null 2>&1; then
   echo "The oc CLI is required. Install it and log in first." >&2

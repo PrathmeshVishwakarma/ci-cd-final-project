@@ -7,7 +7,7 @@ REPO_URL="${REPO_URL:-}"
 REVISION="${REVISION:-main}"
 RUN_NAME="${RUN_NAME:-oc-pipelines-oc-green}"
 SERVICE_ACCOUNT="${SERVICE_ACCOUNT:-default}"
-IMAGE="${IMAGE:-image-registry.openshift-image-registry.svc:5000/${NAMESPACE}/counter-service:latest}"
+IMAGE="${IMAGE:-image-registry.openshift-image-registry.svc:5000/${NAMESPACE}/cicd-app:latest}"
 
 if [ -z "${REPO_URL}" ]; then
   cat >&2 <<'EOF'
@@ -46,7 +46,7 @@ spec:
   workspaces:
     - name: pipeline-workspace
       persistentVolumeClaim:
-        claimName: oc-pipelines-pvc
+        claimName: oc-lab-pvc
   params:
     - name: repo-url
       value: ${REPO_URL}
@@ -57,7 +57,7 @@ spec:
     - name: namespace
       value: ${NAMESPACE}
     - name: deployment-name
-      value: counter-service-green
+      value: cicd-app
 EOF
 
 echo

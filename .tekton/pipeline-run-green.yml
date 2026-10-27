@@ -16,15 +16,15 @@ spec:
   workspaces:
     - name: pipeline-workspace
       persistentVolumeClaim:
-        claimName: oc-pipelines-pvc
+        claimName: oc-lab-pvc
   params:
     - name: repo-url
       value: https://github.com/PrathmeshVishwakarma/ci-cd-final-project.git
     - name: revision
       value: main
     - name: image
-      value: image-registry.openshift-image-registry.svc:5000/sn-labs-prathmeshvi1/counter-service:latest
+      value: image-registry.openshift-image-registry.svc:5000/sn-labs-prathmeshvi1/cicd-app:latest
     - name: namespace
       value: sn-labs-prathmeshvi1
     - name: deployment-name
-      value: counter-service-green
+      value: cicd-app

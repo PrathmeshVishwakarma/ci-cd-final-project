@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: counter-service-green
+  name: cicd-app
   labels:
-    app: counter-service
+    app: cicd-app
     version: green
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: counter-service
+      app: cicd-app
       version: green
   template:
     metadata:
       labels:
-        app: counter-service
+        app: cicd-app
         version: green
     spec:
       containers:
-        - name: counter-service
-          image: image-registry.openshift-image-registry.svc:5000/sn-labs-prathmeshvi1/counter-service:latest
+        - name: cicd-app
+          image: image-registry.openshift-image-registry.svc:5000/sn-labs-prathmeshvi1/cicd-app:latest
           imagePullPolicy: Always
           ports:
             - name: http

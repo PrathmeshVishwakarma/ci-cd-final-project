@@ -16,7 +16,7 @@ class CounterServiceTest(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         payload = response.get_json()
         self.assertEqual(payload["status"], "OK")
-        self.assertEqual(payload["service"], "counter-service")
+        self.assertEqual(payload["service"], "cicd-app")
 
     def test_health_returns_ok(self):
         response = self.client.get("/health")

@@ -15,7 +15,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(name)s %(message)s",
 )
-logger = logging.getLogger("counter-service")
+logger = logging.getLogger("cicd-app")
 
 PORT = int(os.environ.get("PORT", "8000"))
 
@@ -27,7 +27,7 @@ counter = {"count": 0}
 # WSGI alias used by the Python S2I builder (APP_MODULE=app:application).
 application = app
 
-logger.info("SERVICERUNNING counter-service listening on port %d", PORT)
+logger.info("SERVICERUNNING cicd-app listening on port %d", PORT)
 
 
 @app.get("/")
@@ -35,7 +35,7 @@ def index():
     """Return service metadata."""
     return jsonify(
         project="ci-cd-final-project",
-        service="counter-service",
+        service="cicd-app",
         status="OK",
         port=PORT,
     )

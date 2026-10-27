@@ -9,11 +9,12 @@ Public repository: <https://github.com/PrathmeshVishwakarma/ci-cd-final-project>
 | Field | Value |
 | --- | --- |
 | Project name | **ci-cd-final-project** |
-| Application | **counter-service** |
+| Application name | **cicd-app** |
 | Runtime | Python 3.9 / Flask 2.2 |
 | Continuous integration | GitHub Actions |
 | Continuous delivery | Tekton / OpenShift Pipelines |
 | Target platform | OpenShift, lab project `sn-labs-prathmeshvi1` |
+| PVC | **oc-lab-pvc** |
 | Test runner | nose |
 | Linter | flake8 |
 
@@ -57,8 +58,8 @@ The service listens on port `8000`.
 |   |-- pipeline-run-final.yml       # oc-pipelines-oc-final run
 |   `-- pipeline-run-green.yml       # oc-pipelines-oc-green run
 |-- manifests/
-|   |-- deployment.yaml              # counter-service-green deployment
-|   |-- service.yaml                 # counter-service-green service
+|   |-- deployment.yaml              # cicd-app deployment
+|   |-- service.yaml                 # cicd-app service
 |   `-- route.yaml                   # edge-terminated route
 |-- scripts/
 |   |-- bootstrap-openshift.sh       # create PVC, tasks, and pipeline
@@ -138,7 +139,7 @@ chmod +x scripts/*.sh
 
 This creates:
 
-- the `oc-pipelines-pvc` PVC with storage class `skills-network-learner` and
+- the `oc-lab-pvc` PVC with storage class `skills-network-learner` and
   a requested capacity of `1Gi`;
 - the custom Tekton tasks and the `oc-pipelines` pipeline.
 
@@ -203,7 +204,7 @@ curl -k https://<route-host>/
 | Q2 | `.github/workflows/workflow.yml` | Public GitHub URL of the workflow |
 | Q3 | `.tekton/tasks.yml` | Public GitHub URL of the tasks |
 | Q4 | `cicd-github-validate` | `./scripts/capture-github-actions.sh <owner>/<repo>` |
-| Q5 | `oc-pipelines-console-pvc-details.png` | OpenShift console: **Storage > PersistentVolumeClaim > oc-pipelines-pvc** |
+| Q5 | `oc-pipelines-console-pvc-details.png` | OpenShift console: **Storage > PersistentVolumeClaim > oc-lab-pvc** |
 | Q6 | `oc-pipelines-oc-final.png` | OpenShift console: **Pipelines > PipelineRuns > oc-pipelines-oc-final** |
 | Q7 | `oc-pipelines-oc-green.png` | OpenShift console: **Pipelines > PipelineRuns > oc-pipelines-oc-green** |
 | Q8 | `oc-pipeline-application-logs` | `./scripts/capture-app-logs.sh` |
@@ -223,7 +224,7 @@ cat oc-pipeline-application-logs
 The application log contains the startup line:
 
 ```text
-SERVICERUNNING counter-service listening on port 8000
+SERVICERUNNING cicd-app listening on port 8000
 ```
 
 ## Troubleshooting
@@ -241,7 +242,7 @@ SERVICERUNNING counter-service listening on port 8000
   `skills-network-learner` storage class in the target project.
 - **nose fails on Python 3.10+:** nose 1.3.7 targets Python 3.9. The Dockerfile
   and both pipelined test environments use Python 3.9.
-- **Route returns 503:** wait for `oc rollout status deployment/counter-service-green`
+- **Route returns 503:** wait for `oc rollout status deployment/cicd-app`
   and confirm that the pod is `Running` and its readiness probe passes.
 
 ## Cleanup

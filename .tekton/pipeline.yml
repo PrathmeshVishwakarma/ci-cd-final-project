@@ -26,7 +26,7 @@ spec:
     - name: deployment-name
       description: Deployment to update.
       type: string
-      default: counter-service-green
+      default: cicd-app
   workspaces:
     - name: pipeline-workspace
       description: Shared workspace used by every task.
@@ -88,7 +88,7 @@ spec:
         - name: namespace
           value: $(params.namespace)
         - name: app-name
-          value: counter-service
+          value: cicd-app
         - name: context
           value: .
       workspaces:

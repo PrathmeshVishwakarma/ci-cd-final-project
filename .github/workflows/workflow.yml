@@ -42,4 +42,32 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t counter-service:${{ github.sha }} .
+          docker build -t cicd-app:${{ github.sha }} .
+
+  container-build:
+    name: Container build
+    runs-on: ubuntu-22.04
+    container:
+      image: python:3.9
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Lint with flake8
+        run: |
+          flake8 app.py tests --count --statistics
+
+      - name: Run unit tests with nose
+        run: |
+          nosetests -v tests

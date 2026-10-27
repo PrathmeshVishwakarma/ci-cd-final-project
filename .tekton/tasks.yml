@@ -10,14 +10,16 @@ spec:
     - name: source
       description: Workspace shared by all pipeline tasks.
   steps:
-    - name: cleanup
+    - name: remove
       image: alpine:3.19
+      env:
+        - name: WORKSPACE_SOURCE_PATH
+          value: $(workspaces.source.path)
       script: |
         #!/bin/sh
         set -eu
-        workspace="$(workspaces.source.path)"
-        echo "Cleaning workspace: ${workspace}"
-        find "${workspace}" -mindepth 1 -maxdepth 1 \
+        echo "Removing files from ${WORKSPACE_SOURCE_PATH}"
+        find "${WORKSPACE_SOURCE_PATH}" -mindepth 1 -maxdepth 1 \
           ! -name lost+found -exec rm -rf {} +
         echo "Workspace cleaned."
 ---
@@ -111,7 +113,7 @@ spec:
     - name: app-name
       description: BuildConfig and ImageStream name.
       type: string
-      default: counter-service
+      default: cicd-app
     - name: context
       description: Build context directory.
       type: string
@@ -202,11 +204,11 @@ spec:
     - name: deployment-name
       description: Deployment to update.
       type: string
-      default: counter-service-green
+      default: cicd-app
     - name: container-name
       description: Container name inside the deployment.
       type: string
-      default: counter-service
+      default: cicd-app
     - name: manifests-dir
       description: Directory that contains the OpenShift manifests.
       type: string
